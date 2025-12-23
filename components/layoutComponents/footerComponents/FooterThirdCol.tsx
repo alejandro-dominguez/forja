@@ -5,19 +5,14 @@ import { BiSolidCaretUpCircle } from 'react-icons/bi';
 
 const FooterThirdCol = () => {
     return (
-        <div className='flex flex-col items-center gap-7'>
+        <div className='flex flex-col items-center gap-14'>
             <BiSolidCaretUpCircle
-                size={32}
+                size={30}
                 className='block cursor-pointer text-white'
                 onClick={scrollTop}
             />
             <small>
-                <span>
-                    &copy; 2025
-                </span>
-                <span>
-                    Yamil Gaggiotti
-                </span>
+                &copy; 2025 Yamil Gaggiotti
             </small>
         </div>
     )

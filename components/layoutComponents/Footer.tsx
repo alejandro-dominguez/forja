@@ -1,6 +1,7 @@
 import FooterFirstCol from '@/components/layoutComponents/footerComponents/FooterFirstCol';
 import FooterSecondCol from '@/components/layoutComponents/footerComponents/FooterSecondCol';
 import FooterThirdCol from '@/components/layoutComponents/footerComponents/FooterThirdCol';
+import FooterFourthCol from './footerComponents/FooterFourthCol';
 
 const Footer = () => {
     return (
@@ -9,6 +10,7 @@ const Footer = () => {
                 <FooterFirstCol />
                 <FooterSecondCol />
                 <FooterThirdCol />
+                <FooterFourthCol />
             </div>
         </div>
     )
