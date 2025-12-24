@@ -1,6 +1,6 @@
 const Carrito = () => {
     return (
-        <div>Carrito</div>
+        <div className='md:px-16 lg:px-24'>Carrito</div>
     )
 }
 

@@ -1,6 +1,6 @@
 const Sucursales = () => {
     return (
-        <div>Sucursales</div>
+        <div className='md:px-16 lg:px-24'>Sucursales</div>
     )
 }
 

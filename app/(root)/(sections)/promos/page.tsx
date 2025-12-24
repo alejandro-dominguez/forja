@@ -1,6 +1,6 @@
 const Promos = () => {
     return (
-        <div>Promos</div>
+        <div className='md:px-16 lg:px-24'>Promos</div>
     )
 }
 

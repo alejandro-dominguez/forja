@@ -1,6 +1,6 @@
 const Shop = () => {
     return (
-        <div>
+        <div className='md:px-16 lg:px-24'>
             Shop
         </div>
     )

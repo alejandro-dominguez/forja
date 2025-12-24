@@ -8,11 +8,11 @@ const FooterThirdCol = () => {
         <div className='flex flex-col items-center gap-14'>
             <BiSolidCaretUpCircle
                 size={30}
-                className='block cursor-pointer text-white'
+                className='block cursor-pointer text-white transition-colors hover:text-lighter'
                 onClick={scrollTop}
             />
             <small>
-                &copy; 2025 Yamil Gaggiotti
+                &copy; 2025 Pixel Coffee
             </small>
         </div>
     )

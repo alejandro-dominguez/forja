@@ -4,7 +4,7 @@ import { navItems } from '@/constants/navItems';
 
 const NavUl = () => {
     return (
-        <ul className='flex gap-6'>
+        <ul className='flex gap-4'>
             {navItems.map(({ label, href }) => (
                 <li
                     key={href}

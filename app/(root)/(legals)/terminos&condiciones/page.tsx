@@ -1,6 +1,6 @@
 const TerminosCondiciones = () => {
     return (
-        <div>Términos y condiciones</div>
+        <div className='md:px-16 lg:px-24'>Términos y condiciones</div>
     )
 }
 

@@ -1,6 +1,6 @@
 const Devoluciones = () => {
     return (
-        <div>devoluciones</div>
+        <div className='md:px-16 lg:px-24'>devoluciones</div>
     )
 }
 
