@@ -34,10 +34,7 @@ html {
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-	@apply bg-teal-500/[5.1%] text-slate-800 text-base;
+	@apply text-slate-800 text-base;
 }
 
 span {
@@ -60,12 +57,8 @@ input {
     @apply outline-none;
 }
 
-input::placeholder {
-	@apply tracking-widest;
-}
-
 textarea::placeholder {
-	@apply text-sm tracking-widest;
+	@apply text-sm;
 }
 
 textarea::-webkit-scrollbar {
@@ -78,7 +71,7 @@ textarea::-webkit-scrollbar {
     }
 
     .nav-link::after {
-        @apply absolute left-0 -bottom-1.5 h-0.75 w-[0%] content-[''] bg-dark duration-230; 
+        @apply absolute left-0 -bottom-1.5 h-0.75 w-[0%] content-[''] bg-main duration-230; 
     }
 
     .nav-link:hover::after {

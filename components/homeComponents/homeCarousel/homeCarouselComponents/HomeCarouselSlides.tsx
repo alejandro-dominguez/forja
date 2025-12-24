@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { CarouselSlide } from '@/components/homeComponents/homeCarousel/HomeCarouselServer';
+import type { CarouselSlide } from '../HomeCarouselServer';
 
 interface Props {
     slides: CarouselSlide[]

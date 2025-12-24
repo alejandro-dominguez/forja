@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { CarouselSlide } from '@/components/homeComponents/homeCarousel/HomeCarouselServer';
-import HomeCarouselSlides from '@/components/homeComponents/homeCarousel/homeCarouselComponents/HomeCarouselSlides';
-import HomeCarouselControls from '@/components/homeComponents/homeCarousel/homeCarouselComponents/HomeCarouselControls';
+import type { CarouselSlide } from './HomeCarouselServer';
+import HomeCarouselSlides from './homeCarouselComponents/HomeCarouselSlides';
+import HomeCarouselControls from './homeCarouselComponents/HomeCarouselControls';
 
 interface Props {
     slides: CarouselSlide[]

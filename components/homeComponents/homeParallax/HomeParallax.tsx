@@ -14,7 +14,7 @@ const HomeParallax = () => {
     return (
         <div
             className={`
-                relative grid place-items-center min-h-120 w-screen
+                relative grid place-items-center min-h-120 w-400
                 bg-cover bg-no-repeat bg-center bg-fixed before:content-['']
                 before:absolute before:inset-0 before:bg-black/90 before:opacity-50 
             `}

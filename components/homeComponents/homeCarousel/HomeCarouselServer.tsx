@@ -1,4 +1,4 @@
-import HomeCarouselClient from '@/components/homeComponents/homeCarousel/HomeCarouselClient';
+import HomeCarouselClient from './HomeCarouselClient';
 
 export interface CarouselSlide {
     id: number

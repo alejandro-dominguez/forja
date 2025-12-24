@@ -1,5 +1,7 @@
 'use client';
 
+import FaqsQuestion from './faqsComponents/FaqsQuestion';
+import FaqsAnswer from './faqsComponents/FaqsAnswer';
 import { useState } from 'react';
 
 type Faq = {
@@ -19,17 +21,17 @@ const faqs: Faq[] = [
     {
         question: '¿Tengo que reservar turno?',
         answer:
-        'No tenés que reservar turno, te recomendamos venir 5 o 10 minutos antes de la clase.',
+            'No tenés que reservar turno, te recomendamos venir 5 o 10 minutos antes de la clase.',
     },
     {
         question: '¿Qué tengo que llevar a la clase?',
         answer:
-        'Traé una botella de agua, la podés cargar en nuestros dispenser.',
+            'Traé una botella de agua, la podés cargar en nuestros dispenser.',
     },
     {
         question: '¿Tengo que llevar protecciones?',
         answer:
-        'Nosotros te prestamos las protecciones hasta que adquieras unas propias.',
+            'Nosotros te prestamos las protecciones hasta que adquieras unas propias.',
     },
     {
         question: '¿Cómo debo ir al gimnasio?',
@@ -38,60 +40,39 @@ const faqs: Faq[] = [
 ]
 
 const Faqs = () => {
-    const [ openItems, setOpenItems ] = useState<number[]>([])
+    const [openItems, setOpenItems] = useState<number[]>([])
 
     const toggleItem = (index: number) => {
-            setOpenItems((prev) =>
-                prev.includes(index) ?
-                    prev.filter((i) => i !== index)
-                :
-                    [...prev, index]
-            )
+        setOpenItems((prev) =>
+            prev.includes(index) ?
+                prev.filter((i) => i !== index)
+            :
+                [...prev, index]
+        )
     }
 
     return (
-        <section className='w-full pt-7 h-185'>
-            <h2 className='mb-5 text-center text-3xl font-extrabold tracking-tight'>
+        <section className='w-full pt-7 h-180'>
+            <h2 className='mb-8 text-center text-3xl font-extrabold tracking-tight'>
                 Preguntas Frecuentes
             </h2>
+
             <div className='bg-darker/95 backdrop-blur rounded text-white'>
                 {faqs.map((faq, index) => {
-                    const isOpen = openItems.includes(index);
+                    const isOpen = openItems.includes(index)
 
                     return (
-                    <div key={index}>
-                        <button
-                            onClick={() => toggleItem(index)}
-                            className='flex w-full items-center justify-between transition py-[.675rem]
-                            text-[1.05rem] font-semibold hover:bg-dark/85 tracking-wide px-5'
-                        >
-                            {faq.question}
-                            <span
-                                className={`ml-4 text-2xl transition
-                                    ${
-                                        isOpen ? 'rotate-45' : 'rotate-0'
-                                    }`
-                                }
-                            >
-                                +
-                            </span>
-                        </button>
-
-                        {/* CONTENIDO */}
-                        <div
-                        className={`grid overflow-hidden px-6 transition-all
-                            duration-300 ease-in-out
-                            ${
-                                isOpen ? 'grid-rows-[1fr] pb-5 opacity-100'
-                                : 'grid-rows-[0fr] opacity-0'
-                            }`
-                        }
-                        >
-                        <div className='overflow-hidden text-[.9rem] tracking-wide pt-2'>
-                            {faq.answer}
+                        <div key={index}>
+                            <FaqsQuestion
+                                question={faq.question}
+                                isOpen={isOpen}
+                                onClick={() => toggleItem(index)}
+                            />
+                            <FaqsAnswer
+                                answer={faq.answer}
+                                isOpen={isOpen}
+                            />
                         </div>
-                        </div>
-                    </div>
                     )
                 })}
             </div>

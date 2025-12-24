@@ -1,5 +1,5 @@
-import NavLogo from '@/components/layoutComponents/navComponents/NavLogo';
-import NavUl from '@/components/layoutComponents/navComponents/NavUl';
+import NavLogo from './navComponents/NavLogo';
+import NavUl from './navComponents/NavUl';
 
 const Navbar = () => {
     return (
