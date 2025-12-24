@@ -10,7 +10,7 @@ const FooterSecondCol = () => {
                 Contacto
             </h3>
             <Link
-                href='https://wa.me/+5493462517689'
+                href='https://wa.me/+5493412820807'
                 referrerPolicy='no-referrer'
                 rel='noopener'  
                 target='_blank'
@@ -20,7 +20,7 @@ const FooterSecondCol = () => {
                     <FaPhoneAlt className='block' size={15} />
                 </div>
                 <span>
-                    341-5555555
+                    341-2820807
                 </span>
             </Link>
             <Link

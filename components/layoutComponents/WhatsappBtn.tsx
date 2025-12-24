@@ -5,7 +5,7 @@ const WhatsappBtn = () => {
     return (
         <div className='fixed bottom-26 right-5 grid place-items-center'>
             <Link
-                href='https://wa.me/+5493462517689'
+                href='https://wa.me/+5493412820807'
                 referrerPolicy='no-referrer'
                 rel='noopener'
                 target='_blank'

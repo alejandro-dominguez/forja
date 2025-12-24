@@ -20,13 +20,14 @@ const HomeCarouselControls = ({
                 <button
                     onClick={onPrev}
                     disabled={isFirst}
-                className={`
-                    grid place-items-center p-[.2rem] rounded-full transition-colors
-                    ${
-                        isFirst ? 'bg-light/30 pointer-events-none'
-                        : 'bg-light/70 hover:bg-lighter cursor-pointer'
-                    }
-                `}
+                    className={`
+                        grid place-items-center p-[.2rem] rounded-full transition-colors
+                        ${
+                            isFirst ?'bg-light/30 pointer-events-none text-white/75'
+                            : `bg-light/70 hover:bg-lighter cursor-pointer
+                            text-white/75 hover:text-white`
+                        }
+                    `}
                 >
                     <BiSolidCaretLeftCircle size={28} className='text-white/75' />
                 </button>
@@ -34,16 +35,16 @@ const HomeCarouselControls = ({
                 <button
                     onClick={onNext}
                     disabled={isLast}
-                className={`
-                    grid place-items-center p-[.2rem] rounded-full transition-colors
-                    ${
-                        isLast
-                            ? 'bg-light/30 pointer-events-none'
-                            : 'bg-light/70 hover:bg-lighter cursor-pointer'
-                    }
-                `}
+                    className={`
+                        grid place-items-center p-[.2rem] rounded-full transition-colors
+                        ${
+                            isLast ?'bg-light/30 pointer-events-none text-white/75'
+                            : `bg-light/70 hover:bg-lighter cursor-pointer
+                            text-white/75 hover:text-white`
+                        }
+                    `}
                 >
-                    <BiSolidCaretRightCircle size={28} className='text-white/75' />
+                    <BiSolidCaretRightCircle size={28} />
                 </button>
             </div>
     )

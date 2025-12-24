@@ -52,7 +52,7 @@ const Faqs = () => {
     }
 
     return (
-        <section className='w-full pt-7 h-180'>
+        <section className='w-full pt-7 h-185'>
             <h2 className='mb-8 text-center text-3xl font-extrabold tracking-tight'>
                 Preguntas Frecuentes
             </h2>
