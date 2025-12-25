@@ -35,12 +35,12 @@ const HomeCarouselClient = ({ slides }: Props) => {
                 intervalRef.current = null
             }
         }
-    }, [isHovering, slides.length])
+    }, [ isHovering, slides.length ])
 
     return (
         <section
-            className='relative w-full h-[60svh] overflow-hidden
-            rounded shadow-xs shadow-sky-950/50'
+            className='relative w-full h-[72svh] overflow-hidden
+            rounded shadow-xs shadow-sky-950/50 mb-7'
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >

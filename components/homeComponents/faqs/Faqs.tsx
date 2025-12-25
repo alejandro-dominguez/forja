@@ -20,18 +20,15 @@ const faqs: Faq[] = [
     },
     {
         question: '¿Tengo que reservar turno?',
-        answer:
-            'No tenés que reservar turno, te recomendamos venir 5 o 10 minutos antes de la clase.',
+        answer: 'No tenés que reservar turno, te recomendamos venir 5 o 10 minutos antes de la clase.',
     },
     {
         question: '¿Qué tengo que llevar a la clase?',
-        answer:
-            'Traé una botella de agua, la podés cargar en nuestros dispenser.',
+        answer: 'Traé una botella de agua, la podés cargar en nuestros dispenser.',
     },
     {
         question: '¿Tengo que llevar protecciones?',
-        answer:
-            'Nosotros te prestamos las protecciones hasta que adquieras unas propias.',
+        answer: 'Nosotros te prestamos las protecciones hasta que adquieras unas propias.',
     },
     {
         question: '¿Cómo debo ir al gimnasio?',
@@ -47,16 +44,19 @@ const Faqs = () => {
             prev.includes(index) ?
                 prev.filter((i) => i !== index)
             :
-                [...prev, index]
+                [ ...prev, index ]
         )
     }
 
     return (
-        <section className='w-full pt-7 h-185'>
-            <h2 className='mb-8 text-center text-3xl font-extrabold tracking-tight'>
+        <section className='w-full mt-12 h-255 sm:h-185'>
+            <h2
+                className='mb-[1.975rem] text-center text-3xl text-dark font-extrabold
+                tracking-tight leading-[2.05rem]'
+            >
                 Preguntas Frecuentes
             </h2>
-            <div className='bg-darker rounded text-white'>
+            <div className='bg-darker rounded text-white shadow shadow-darker/50'>
                 {faqs.map(({ question, answer }, index) => {
                     const isOpen = openItems.includes(index)
 

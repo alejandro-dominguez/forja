@@ -27,11 +27,12 @@ const RootLayout = ({
     children: React.ReactNode;
 }>) => {
     return (
-        <html lang='en'>
+        <html lang='en' className='bg-darker/95'>
             <body
                 className={`
                     flex flex-col min-h-svh overflow-x-hidden overflow-y-scroll
-                    ${montserrat.variable} ${delaGothicOne.variable} antialiased
+                    bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
+                    mx-auto max-w-400 shadow shadow-darker/50
                 `}
             >
                 <Navbar />

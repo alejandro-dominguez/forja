@@ -13,10 +13,9 @@ const FaqsQuestion = ({ question, isOpen, onClick }: Props) => {
         <button
             onClick={onClick}
             className='flex w-full items-center justify-between transition py-[.675rem]
-            text-[1.05rem] font-semibold hover:bg-dark/85 tracking-wide px-5'
+            text-[1.05rem] font-semibold hover:bg-dark/85 tracking-wide px-5 text-start'
         >
             {question}
-
             <div className='p-1 cursor-pointer'>
                 <FaPlus
                     className={`text-lg transition-transform ${

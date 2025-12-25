@@ -1,4 +1,4 @@
-import logo from '@/public/logo-3.svg'
+import logo from '@/public/logo-3.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 

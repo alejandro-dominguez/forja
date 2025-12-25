@@ -8,13 +8,13 @@ import HomeParallax from '@/components/homeComponents/homeParallax/HomeParallax'
 const Home = () => {
     return (
         <div className='mt-7'>
-            <div className='md:px-16 lg:px-24'>
+            <div className='px-3 sm:px-5 md:px-16 lg:px-24'>
                 <HomeCarouselServer />
                 <FeaturedProducts />
-                {/* <GymEvents /> */}
+                <GymEvents />
             </div>
                 <HomeParallax />
-            <div className='md:px-16 lg:px-24'>
+            <div className='px-3 sm:px-5 md:px-16 lg:px-24'>
                 <Faqs />
                 <ContactForm />
             </div>

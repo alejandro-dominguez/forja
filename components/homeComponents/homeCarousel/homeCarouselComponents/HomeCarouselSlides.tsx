@@ -35,8 +35,8 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                             href === ' ' ? null :
                             <Link
                                 href={href}
-                                className='px-5 py-1 bg-white/60 text-slate-900 font-semibold
-                                rounded-3xl hover:bg-white/80 transition-colors'
+                                className='px-5 pt-1 pb-1.5 bg-white/60 text-slate-900
+                                font-semibold rounded-3xl hover:bg-white/80 transition-colors'
                             >
                                 Ver más
                             </Link>

@@ -1,3 +1,4 @@
+import FeaturedProductImage from './FeaturedProductImage';
 import FeaturedProductActions from './FeaturedProductActions';
 import FeaturedProductContent from './FeaturedProductContent';
 
@@ -19,15 +20,9 @@ const FeaturedProductCard = ({ product }: Props) => {
     return (
         <div
             className='bg-darker rounded overflow-hidden shadow
-            shadow-black/50 border-4 border-darker'
+            shadow-darker/50 border-4 border-darker flex flex-col'
         >
-            <div className='h-52 w-full bg-white flex items-center justify-center'>
-                <img
-                    src={image}
-                    alt={name}
-                    className='h-full w-full object-contain p-4'
-                />
-            </div>
+            <FeaturedProductImage image={image} name={name} />
             <FeaturedProductContent
                 name={name}
                 description={description}

@@ -42,7 +42,7 @@ const FooterSecondCol = () => {
                     <FaEnvelope className='block' size={16} />
                 </div>
                 <span>
-                    contacto.forja@gmail.com
+                    contacto_forja@gmail.com
                 </span>
             </div>
         </div>

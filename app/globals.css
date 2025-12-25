@@ -16,17 +16,8 @@
     --color-lighter: var(--lighter-color);
     --color-dark: var(--dark-color);
     --color-darker: var(--darker-color);
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
     --font-montserrat: var(--font-montserrat);
     --font-dela-gothic-one: var(--font-dela-gothic-one);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
 }
 
 html {

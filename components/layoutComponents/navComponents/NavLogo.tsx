@@ -14,7 +14,7 @@ const NavLogo = () => {
         return (
             <button
                 onClick={scrollTop}
-                className='w-32 cursor-pointer'
+                className='w-32 cursor-pointer outline-none'
                 aria-label='ir arriba'
             >
                 <Image src={logo} alt='Logo Forja' />
@@ -23,7 +23,7 @@ const NavLogo = () => {
     }
 
     return (
-        <Link href='/' className='w-32'>
+        <Link href='/' className='w-32 outline-none'>
             <Image src={logo} alt='Logo Forja' />
         </Link>
     )
