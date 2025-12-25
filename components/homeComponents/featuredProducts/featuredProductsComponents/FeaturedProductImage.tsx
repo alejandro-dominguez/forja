@@ -7,7 +7,7 @@ type Props = {
 
 const FeaturedProductImage = ({ image, name }: Props) => {
     return (
-        <div className='h-52 w-full bg-white flex items-center justify-center cursor-pointer'>
+        <div className='h-52 w-full bg-white flex items-center justify-center'>
             <img
                 src={image}
                 alt={name}
