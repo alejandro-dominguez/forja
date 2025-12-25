@@ -1,6 +1,6 @@
 const SubmitContactBtn = () => {
     return (
-        <div className='md:col-span-2 flex justify-center mt-2'>
+        <div className='md:col-span-2 flex justify-center'>
             <button
                 type='submit'
                 disabled={true}

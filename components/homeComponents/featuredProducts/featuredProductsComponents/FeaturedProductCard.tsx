@@ -2,6 +2,7 @@ import FeaturedProductActions from './FeaturedProductActions';
 import FeaturedProductContent from './FeaturedProductContent';
 
 type Product = {
+    id: number
     name: string
     image: string
     description: string
@@ -13,24 +14,26 @@ type Props = {
 }
 
 const FeaturedProductCard = ({ product }: Props) => {
+    const { id, name, image, description, price } = product
+
     return (
         <div
-            className='bg-darker/95 backdrop-blur rounded text-white
-            overflow-hidden shadow-xl shadow-black/40'
+            className='bg-darker rounded overflow-hidden shadow
+            shadow-black/50 border-4 border-darker'
         >
-            <div className='h-56 w-full bg-white flex items-center justify-center'>
+            <div className='h-52 w-full bg-white flex items-center justify-center'>
                 <img
-                    src={product.image}
-                    alt={product.name}
+                    src={image}
+                    alt={name}
                     className='h-full w-full object-contain p-4'
                 />
             </div>
             <FeaturedProductContent
-                name={product.name}
-                description={product.description}
-                price={product.price}
+                name={name}
+                description={description}
+                price={price}
             />
-            <FeaturedProductActions />
+            <FeaturedProductActions id={id} />
         </div>
     )
 }

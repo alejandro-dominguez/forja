@@ -11,6 +11,7 @@ const bgUrl: imgUrl[] = [
 ]
 
 const HomeParallax = () => {
+    const { image } = bgUrl[0]
     return (
         <div
             className={`
@@ -18,7 +19,7 @@ const HomeParallax = () => {
                 bg-cover bg-no-repeat bg-center bg-fixed before:content-['']
                 before:absolute before:inset-0 before:bg-black/90 before:opacity-50 
             `}
-            style={{ backgroundImage: `url(${bgUrl[0].image})` }}
+            style={{ backgroundImage: `url(${image})` }}
         >
             <span
                 className='font-dela-gothic-one tracking-widest uppercase z-10

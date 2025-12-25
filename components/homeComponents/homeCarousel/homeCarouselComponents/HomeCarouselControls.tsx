@@ -31,7 +31,6 @@ const HomeCarouselControls = ({
                 >
                     <BiSolidCaretLeftCircle size={28} className='text-white/75' />
                 </button>
-
                 <button
                     onClick={onNext}
                     disabled={isLast}

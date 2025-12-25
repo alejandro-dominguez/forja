@@ -45,20 +45,12 @@ img {
 	@apply w-full block;
 }
 
-label {
-	@apply text-sm tracking-wide font-bold;
-}
-
 textarea {
 	@apply resize-none outline-none;
 }
 
 input {
     @apply outline-none;
-}
-
-textarea::placeholder {
-	@apply text-sm;
 }
 
 textarea::-webkit-scrollbar {

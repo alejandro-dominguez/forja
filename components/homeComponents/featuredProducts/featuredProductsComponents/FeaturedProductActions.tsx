@@ -1,17 +1,26 @@
-const FeaturedProductActions = () => {
+import Link from 'next/link';
+
+type Props = {
+    id: number
+}
+
+const FeaturedProductActions = ({ id }: Props) => {
     return (
-        <div className='px-5 pb-5 flex gap-3'>
+        <div
+            className='px-4 pb-5 flex gap-6 text-white text-shadow
+            text-shadow-darker font-medium tracking-wide'
+        >
             <button
-                className='flex-1 rounded bg-primary py-2
-                text-sm font-semibold transition
-                hover:bg-primary/80 cursor-pointer'
+                className='flex-1 grid place-items-center rounded-md border-2
+                border-white/50 shadow shadow-dark/30 text-[.9rem] font-semibold
+                transition hover:bg-white/15 cursor-pointer pt-2 pb-[.65rem]'
             >
                 Agregar
             </button>
             <button
-                className='flex-1 rounded bg-primary py-2
-                text-sm font-semibold transition
-                hover:bg-primary/80 cursor-pointer'
+                className='flex-1 grid place-items-center rounded-md border-2
+                border-white/50 shadow shadow-dark/30 text-[.9rem] font-semibold
+                transition hover:bg-white/15 cursor-pointer pt-2 pb-[.65rem]'
             >
                 Ver más
             </button>

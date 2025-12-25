@@ -40,7 +40,7 @@ const faqs: Faq[] = [
 ]
 
 const Faqs = () => {
-    const [openItems, setOpenItems] = useState<number[]>([])
+    const [ openItems, setOpenItems ] = useState<number[]>([])
 
     const toggleItem = (index: number) => {
         setOpenItems((prev) =>
@@ -56,20 +56,19 @@ const Faqs = () => {
             <h2 className='mb-8 text-center text-3xl font-extrabold tracking-tight'>
                 Preguntas Frecuentes
             </h2>
-
-            <div className='bg-darker/95 backdrop-blur rounded text-white'>
-                {faqs.map((faq, index) => {
+            <div className='bg-darker rounded text-white'>
+                {faqs.map(({ question, answer }, index) => {
                     const isOpen = openItems.includes(index)
 
                     return (
                         <div key={index}>
                             <FaqsQuestion
-                                question={faq.question}
+                                question={question}
                                 isOpen={isOpen}
                                 onClick={() => toggleItem(index)}
                             />
                             <FaqsAnswer
-                                answer={faq.answer}
+                                answer={answer}
                                 isOpen={isOpen}
                             />
                         </div>

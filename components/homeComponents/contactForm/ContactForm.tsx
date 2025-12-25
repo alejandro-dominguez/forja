@@ -7,7 +7,7 @@ import ContactFormMessage from './contactFormComponents/ContactFormMessage';
 const ContactSection = () => {
     return (
         <section
-            className='relative grid place-items-center w-full h-104
+            className='relative grid place-items-center w-full h-105
             bg-dark bg-cover bg-center bg-no-repeat rounded'
             style={{
                 backgroundImage:
@@ -15,8 +15,8 @@ const ContactSection = () => {
             }}
         >
             <div className='absolute inset-0 bg-dark/60 rounded' />
-            <div className='relative z-10 w-2/3 bg-white rounded-md shadow-lg px-6 pt-4 pb-5'>
-                <h3 className='text-2xl font-extrabold mb-4 text-main'>
+            <div className='relative z-10 w-2/3 bg-white rounded shadow-lg shadow-dark/50 px-6 py-4'>
+                <h3 className='text-2xl font-extrabold mb-[.7rem] text-main'>
                     Déjanos Tu Mensaje
                 </h3>
                 <form className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4'>

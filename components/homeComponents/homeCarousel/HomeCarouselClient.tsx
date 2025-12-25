@@ -10,8 +10,8 @@ interface Props {
 }
 
 const HomeCarouselClient = ({ slides }: Props) => {
-    const [index, setIndex] = useState(0)
-    const [isHovering, setIsHovering] = useState(false)
+    const [ index, setIndex ] = useState(0)
+    const [ isHovering, setIsHovering ] = useState(false)
     const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
     const nextSlide = () => {
@@ -40,7 +40,7 @@ const HomeCarouselClient = ({ slides }: Props) => {
     return (
         <section
             className='relative w-full h-[60svh] overflow-hidden
-            rounded-sm shadow-xs shadow-sky-950/50'
+            rounded shadow-xs shadow-sky-950/50'
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >

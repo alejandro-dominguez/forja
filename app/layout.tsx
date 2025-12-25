@@ -21,11 +21,11 @@ const delaGothicOne = Dela_Gothic_One({
 	weight: '400',
 });
 
-export default function RootLayout({
+const RootLayout = ({
     children,
 }: Readonly<{
     children: React.ReactNode;
-}>) {
+}>) => {
     return (
         <html lang='en'>
             <body
@@ -34,13 +34,15 @@ export default function RootLayout({
                     ${montserrat.variable} ${delaGothicOne.variable} antialiased
                 `}
             >
-                    <Navbar />
+                <Navbar />
                 <main className='flex-1'>
                     {children}
                 </main>
-                    <WhatsappBtn />
-                    <Footer />
+                <WhatsappBtn />
+                <Footer />
             </body>
         </html>
-    );
+    )
 }
+
+export default RootLayout;
