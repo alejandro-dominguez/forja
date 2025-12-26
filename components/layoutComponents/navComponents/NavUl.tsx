@@ -4,20 +4,25 @@ import Link from 'next/link';
 import NavMenuBtn from './NavMenuBtn';
 import scrollToRef from '@/utils/scrollToRef';
 import { navItems } from '@/constants/navItems';
-import { useState } from 'react';
 
-const NavUl = () => {
-    const [ showMobileMenu, setShowMobileMenu ] = useState(false)
+interface Props {
+    isVisible: boolean
+    onToggle: (newValue: boolean) => void
+}
 
+const NavUl = ({ isVisible, onToggle }: Props) => {
     return (
         <div className='md:hidden'>
-            <NavMenuBtn isVisible={showMobileMenu} onToggle={setShowMobileMenu} />
+            <NavMenuBtn isVisible={isVisible} onToggle={onToggle} />
             <div
                 className={`fixed inset-0 z-40 transition-transform duration-250
-                ${showMobileMenu ? 'translate-x-0' : '-translate-x-full'}`}
+                ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <div className='pt-14'>
-                    <ul className='bg-[#b5c2ed] flex flex-col gap-3 p-4'>
+                    <ul
+                        className='bg-[#b5c2ed] grid grid-cols-2 place-items-center
+                        gap-3 py-4 px-10 shadow shadow-darker/50'
+                    >
                         {navItems.map(({ label, href }) => (
                             <li
                                 key={href}
@@ -25,10 +30,10 @@ const NavUl = () => {
                             >
                                 <Link
                                     href={href}
-                                    className='nav-link py-2 mt-2'
+                                    className='nav-link md:py-2 mt-2'
                                     onClick={() => {
-                                        setShowMobileMenu(false)
                                         scrollToRef('scrollYBody', 0)
+                                        onToggle(false)
                                     }}
                                 >
                                     {label}

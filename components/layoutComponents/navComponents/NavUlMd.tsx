@@ -3,7 +3,11 @@ import NavCartBtn from './NavCartBtn';
 import scrollToRef from '@/utils/scrollToRef';
 import { navItems } from '@/constants/navItems';
 
-const NavUlMd = () => {
+interface Props {
+    onToggle: (newValue: boolean) => void
+}
+
+const NavUlMd = ({ onToggle }: Props) => {
     return (
         <ul className='flex gap-4'>
             {navItems.map(({ label, href }) => (
@@ -17,7 +21,7 @@ const NavUlMd = () => {
                     </Link>
                 </li>
             ))}
-            <NavCartBtn />
+            <NavCartBtn onToggle={onToggle} />
         </ul>
     )
 }
