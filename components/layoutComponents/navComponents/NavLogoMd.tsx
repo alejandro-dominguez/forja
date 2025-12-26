@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import logo from '@/public/logo-1.svg';
-import Link from 'next/link';
 import scrollToRef from '@/utils/scrollToRef';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 import { usePathname } from 'next/navigation';
 
 const NavLogoMd = () => {
@@ -23,13 +23,13 @@ const NavLogoMd = () => {
     }
 
     return (
-        <Link
+        <DelayedLink
             href='/'
             className='w-32 outline-none mt-[0.028rem] hidden md:block'
-            onClick={() => scrollToRef('scrollYBody', 0)}
+            onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
         >
             <Image src={logo} alt='Logo Forja' />
-        </Link>
+        </DelayedLink>
     )
 }
 

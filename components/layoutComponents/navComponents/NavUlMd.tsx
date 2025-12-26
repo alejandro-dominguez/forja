@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import NavCartBtn from './NavCartBtn';
 import scrollToRef from '@/utils/scrollToRef';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 import { navItems } from '@/constants/navItems';
 import { usePathname } from 'next/navigation';
-import DelayedLink from '@/components/customComponents/DelayedLink';
 
 interface Props {
     onToggle: (newValue: boolean) => void

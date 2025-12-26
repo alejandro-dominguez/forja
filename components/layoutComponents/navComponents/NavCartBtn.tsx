@@ -1,9 +1,9 @@
 'use client';
 
 import scrollToRef from '@/utils/scrollToRef';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 import { FaCartShopping } from 'react-icons/fa6';
 import { usePathname } from 'next/navigation';
-import DelayedLink from '@/components/customComponents/DelayedLink';
 
 interface Props {
     onToggle: (newValue: boolean) => void

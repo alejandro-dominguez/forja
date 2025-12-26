@@ -1,13 +1,17 @@
-import Link from 'next/link';
+'use client';
+
 import logo from '@/public/logo-2.svg';
 import Image from 'next/image';
+import DelayedLink from '@/components/customComponents/DelayedLink';
+import scrollToRef from '@/utils/scrollToRef';
 import { IoArrowBackCircle } from 'react-icons/io5';
 
 const NoCartItemsCard = () => {
     return (
-        <Link
+        <DelayedLink
             href='/'
-            className='px-12 py-6 rounded-md bg-darker shadow shadow-darker/50 text-white mx-auto mt-9'
+            className='px-20 py-6 rounded-md bg-darker shadow shadow-darker/50 text-white mx-auto mt-9'
+            onBeforeNavigate={() => {scrollToRef('scrollYBody', 0)}}
         >
             <div className='flex flex-col items-center gap-4'>
                 <h1
@@ -31,7 +35,7 @@ const NoCartItemsCard = () => {
                     />
                 </div>
             </div>
-        </Link>
+        </DelayedLink>
     )
 };
 

@@ -2,10 +2,9 @@
 
 import Image from 'next/image';
 import logo from '@/public/logo-mobile.svg';
-import Link from 'next/link';
 import scrollToRef from '@/utils/scrollToRef';
-import { usePathname } from 'next/navigation';
 import DelayedLink from '@/components/customComponents/DelayedLink';
+import { usePathname } from 'next/navigation';
 
 interface Props {
     onToggle: (newValue: boolean) => void
