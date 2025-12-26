@@ -3,7 +3,7 @@ import { FaTruck } from 'react-icons/fa6';
 
 const FooterFirstCol = () => {
     return (
-        <div className='flex flex-col items-start gap-4'>
+        <div className='flex flex-col items-start gap-4 mr-11 md:mr-0'>
             <div className='flex flex-col gap-1'>
                 <h3 className='font-bold text-[.95rem]'>
                     Zona de Envíos

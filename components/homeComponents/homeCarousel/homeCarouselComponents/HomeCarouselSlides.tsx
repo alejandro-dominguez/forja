@@ -20,13 +20,14 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                 >
                     <div
                         className='absolute inset-0 bg-black/40 flex flex-col
-                        justify-start items-start pt-4 pl-6 gap-5'
+                        justify-start items-start pt-3 pl-4 md:pt-4 md:pl-6 gap-4'
                     >
                         {
                             title === ' ' ? null :
                             <h3 
-                                className='text-3xl font-extrabold text-center
-                                text-white text-shadow-sm text-shadow-sky-950/30'
+                                className='text-2xl sm:text-3xl font-extrabold pr-4 sm:pr-0
+                                text-white text-shadow-sm text-shadow-sky-950/30
+                                leading-7 sm:leading-normal'
                             >
                                 {title}
                             </h3>
@@ -35,8 +36,9 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                             href === ' ' ? null :
                             <Link
                                 href={href}
-                                className='px-5 pt-1 pb-1.5 bg-white/60 text-slate-900
-                                font-semibold rounded-3xl hover:bg-white/80 transition-colors'
+                                className='sm:px-4 sm:pt-1 sm:pb-1.5 bg-white/60 text-slate-900
+                                font-semibold rounded-3xl hover:bg-white/80 transition-colors
+                                text-sm sm:text-base px-3 pt-[.219rem] pb-1'
                             >
                                 Ver más
                             </Link>

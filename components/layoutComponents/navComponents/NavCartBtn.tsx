@@ -3,9 +3,9 @@ import { FaCartShopping } from 'react-icons/fa6';
 
 const NavCartBtn = () => {
     return (
-        <li>
+        <li className='z-50'>
             <Link href='/carrito'>
-                <FaCartShopping size={22} className='block' />
+                <FaCartShopping className='block text-3xl md:text-2xl' />
             </Link>
         </li>
     )

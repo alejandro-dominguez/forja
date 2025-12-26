@@ -44,7 +44,10 @@ const products: Product[] = [
 const FeaturedProducts = () => {
     return (
         <section className='mb-20'>
-            <h2 className='mb-10 font-dela-gothic-one tracking-wide text-dark text-center text-4xl'>
+            <h2
+                className='mb-10 font-dela-gothic-one tracking-wide
+                text-dark text-center text-2xl md:text-4xl'
+            >
                 DESTACADOS
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>

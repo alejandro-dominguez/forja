@@ -1,9 +1,9 @@
-import Navbar from '@/components/layoutComponents/Navbar';
+import Header from '@/components/layoutComponents/Header';
 import Footer from '@/components/layoutComponents/Footer';
-import './globals.css';
 import WhatsappBtn from '@/components/layoutComponents/WhatsappBtn';
 import { Montserrat, Dela_Gothic_One } from 'next/font/google';
 import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
     title: 'Forja Fitness',
@@ -30,13 +30,15 @@ const RootLayout = ({
         <html lang='en' className='bg-darker/95'>
             <body
                 className={`
-                    flex flex-col min-h-svh overflow-x-hidden overflow-y-scroll
+                    flex flex-col overflow-x-hidden overflow-y-scroll min-h-svh
                     bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
                     mx-auto max-w-400 shadow shadow-darker/50
                 `}
             >
-                <Navbar />
-                <main className='flex-1'>
+                <Header />
+                <main className='flex-1 scroll-p-200'>
+                    <div className='-mt-12' />
+                    <div className='mt-16 md:mt-20' />
                     {children}
                 </main>
                 <WhatsappBtn />

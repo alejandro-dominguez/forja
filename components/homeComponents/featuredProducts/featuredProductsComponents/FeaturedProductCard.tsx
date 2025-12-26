@@ -2,7 +2,7 @@ import FeaturedProductImage from './FeaturedProductImage';
 import FeaturedProductActions from './FeaturedProductActions';
 import FeaturedProductContent from './FeaturedProductContent';
 
-type Product = {
+type product = {
     id: number
     name: string
     image: string
@@ -11,7 +11,7 @@ type Product = {
 }
 
 type Props = {
-    product: Product
+    product: product
 }
 
 const FeaturedProductCard = ({ product }: Props) => {
