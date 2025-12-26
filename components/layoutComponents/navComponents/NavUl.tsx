@@ -21,7 +21,7 @@ const NavUl = ({ isVisible, onToggle }: Props) => {
                 <div className='pt-14'>
                     <ul
                         className='bg-[#b5c2ed] grid grid-cols-2 place-items-center
-                        gap-3 py-4 px-10 shadow shadow-darker/50'
+                        gap-3 -mt-14 pt-16 pb-4 px-10 shadow-md shadow-darker/20'
                     >
                         {navItems.map(({ label, href }) => (
                             <li
