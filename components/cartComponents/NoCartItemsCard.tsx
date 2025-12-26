@@ -11,7 +11,7 @@ const NoCartItemsCard = () => {
         <DelayedLink
             href='/'
             className='px-12 md:px-20 py-5 md:py-6 rounded-md bg-darker
-            shadow shadow-darker/50 text-white mx-auto mt-1 md:mt-9'
+            shadow shadow-darker/50 text-white mx-auto mt-9'
             onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
         >
             <div className='flex flex-col items-center gap-4'>
@@ -26,7 +26,10 @@ const NoCartItemsCard = () => {
                         <span>
                             en el carrito
                         </span>
-                        <IoArrowBackCircle size={30} className='block text-lighter' />
+                        <IoArrowBackCircle
+                            size={30}
+                            className='block text-lighter drop-shadow-amber-50/15 drop-shadow-xs'
+                        />
                     </div>
                 </h1>
                 <div className='w-50 drop-shadow-amber-50/20 drop-shadow-sm'>

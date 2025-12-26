@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 type Props = {
     id: number
 }
@@ -12,15 +10,15 @@ const FeaturedProductActions = ({ id }: Props) => {
         >
             <button
                 className='flex-1 grid place-items-center rounded-md border-2
-                border-white/50 shadow shadow-dark/30 text-[.9rem] font-semibold
-                transition hover:bg-white/15 cursor-pointer pt-2 pb-[.65rem]'
+                border-white/90 shadow shadow-dark/30 text-[.9rem] font-semibold
+                transition hover:bg-white/10 cursor-pointer pt-2 pb-[.65rem]'
             >
                 Agregar
             </button>
             <button
                 className='flex-1 grid place-items-center rounded-md border-2
                 border-white/50 shadow shadow-dark/30 text-[.9rem] font-semibold
-                transition hover:bg-white/15 cursor-pointer pt-2 pb-[.65rem]'
+                transition hover:bg-white/10 cursor-pointer pt-2 pb-[.65rem]'
             >
                 Ver más
             </button>

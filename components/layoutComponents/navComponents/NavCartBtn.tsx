@@ -28,10 +28,10 @@ const NavCartBtn = ({ onToggle }: Props) => {
     }
 
     return (
-        <li className='z-50'>
+        <li className='z-50 mt-[.3rem] md:mt-0'>
             <DelayedLink
                 href='/carrito'
-                className='nav-link md:py-2 mt-2'
+                className='nav-link'
                 onBeforeNavigate={() => {
                     scrollToRef('scrollYBody', 0)
                     onToggle(false)
