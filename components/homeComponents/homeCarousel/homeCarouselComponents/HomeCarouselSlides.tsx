@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import HomeCarouselLink from '../HomeCarouselLink';
 import type { CarouselSlide } from '../HomeCarouselServer';
 
 interface Props {
@@ -44,14 +44,7 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                         }
                         {
                             href === ' ' ? null :
-                            <Link
-                                href={href}
-                                className='sm:px-4 sm:pt-1 sm:pb-1.5 bg-white/60 text-slate-900
-                                font-semibold rounded-3xl hover:bg-white/80 transition-colors
-                                text-sm sm:text-base px-3 pt-[.219rem] pb-1 -mt-1 sm:mt-0.5'
-                            >
-                                Ver más
-                            </Link>
+                            <HomeCarouselLink href={href} />
                         }
                     </div>
                 </div>

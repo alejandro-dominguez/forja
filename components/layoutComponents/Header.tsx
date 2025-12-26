@@ -1,5 +1,3 @@
-'use client';
-
 import NavBar from './navComponents/NavBar';
 
 const Header = () => {

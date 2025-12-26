@@ -1,4 +1,7 @@
-import Link from 'next/link';
+'use client';
+
+import DelayedLink from '@/components/customComponents/DelayedLink';
+import scrollToRef from '@/utils/scrollToRef';
 import { FaTruck } from 'react-icons/fa6';
 
 const FooterFirstCol = () => {
@@ -16,12 +19,18 @@ const FooterFirstCol = () => {
                 </div>
             </div>
             <div className='flex flex-col gap-1 font-extralight text-[.845rem]'>    
-                <Link href='/terminos&condiciones'>
+                <DelayedLink
+                    href='/terminos&condiciones'
+                    onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
+                >
                     Términos y condiciones
-                </Link>
-                <Link href='/devoluciones'>
+                </DelayedLink>
+                <DelayedLink
+                    href='/devoluciones'
+                    onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
+                >
                     Devoluciones
-                </Link>
+                </DelayedLink>
             </div>
         </div>
     )

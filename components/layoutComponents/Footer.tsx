@@ -1,5 +1,3 @@
-'use client';
-
 import FooterFirstCol from './footerComponents/FooterFirstCol';
 import FooterSecondCol from './footerComponents/FooterSecondCol';
 import FooterThirdCol from './footerComponents/FooterThirdCol';
