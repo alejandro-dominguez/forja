@@ -1,7 +1,7 @@
 const ContactFormEmail = () => {
     return (
         <div className='flex flex-col'>
-            <label className='text-light font-bold'>
+            <label className='font-bold'>
                 Email
             </label>
             <input

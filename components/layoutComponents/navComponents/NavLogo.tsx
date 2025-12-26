@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import logo from '@/public/logo-mobile.svg';
 import Link from 'next/link';
-import scrollTop from '@/utils/scrollTop';
+import scrollToRef from '@/utils/scrollToRef';
 import { usePathname } from 'next/navigation';
 
 const NavLogo = () => {
@@ -13,7 +13,7 @@ const NavLogo = () => {
     if (isHome) {
         return (
             <button
-                onClick={scrollTop}
+                onClick={() => scrollToRef('scrollYBody', 0)}
                 className='w-8 cursor-pointer outline-none block md:hidden'
                 aria-label='ir arriba'
             >
@@ -23,7 +23,11 @@ const NavLogo = () => {
     }
 
     return (
-        <Link href='/' className='w-8 outline-none block md:hidden'>
+        <Link
+            href='/'
+            className='w-8 outline-none block md:hidden'
+            onClick={() => scrollToRef('scrollYBody', 0)}
+        >
             <Image src={logo} alt='Logo Forja' />
         </Link>
     )

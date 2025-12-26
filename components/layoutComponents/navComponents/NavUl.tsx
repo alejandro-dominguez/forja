@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import NavMenuBtn from './NavMenuBtn';
+import scrollToRef from '@/utils/scrollToRef';
 import { navItems } from '@/constants/navItems';
 import { useState } from 'react';
 
@@ -10,18 +11,13 @@ const NavUl = () => {
 
     return (
         <div className='md:hidden'>
-            <NavMenuBtn
-                state={showMobileMenu}
-                onToggle={setShowMobileMenu}
-            />
+            <NavMenuBtn isVisible={showMobileMenu} onToggle={setShowMobileMenu} />
             <div
-                className={`
-                    fixed inset-0 z-40 transition-transform duration-250
-                    ${showMobileMenu ? 'translate-x-0' : '-translate-x-full'}
-                `}
+                className={`fixed inset-0 z-40 transition-transform duration-250
+                ${showMobileMenu ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <div className='pt-14'>
-                    <ul className='bg-[#b5c2ed] flex flex-col gap-3 w-screen p-4'>
+                    <ul className='bg-[#b5c2ed] flex flex-col gap-3 p-4'>
                         {navItems.map(({ label, href }) => (
                             <li
                                 key={href}
@@ -29,8 +25,11 @@ const NavUl = () => {
                             >
                                 <Link
                                     href={href}
-                                    onClick={() => setShowMobileMenu(false)}
                                     className='nav-link py-2 mt-2'
+                                    onClick={() => {
+                                        setShowMobileMenu(false)
+                                        scrollToRef('scrollYBody', 0)
+                                    }}
                                 >
                                     {label}
                                 </Link>

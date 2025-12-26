@@ -1,6 +1,6 @@
 'use client';
 
-import scrollTop from '@/utils/scrollTop';
+import scrollToRef from '@/utils/scrollToRef';
 import { BiSolidCaretUpCircle } from 'react-icons/bi';
 
 const FooterThirdCol = () => {
@@ -9,7 +9,7 @@ const FooterThirdCol = () => {
             <BiSolidCaretUpCircle
                 size={30}
                 className='block cursor-pointer text-white transition-colors hover:text-lighter'
-                onClick={scrollTop}
+                onClick={() => scrollToRef('scrollYBody', 0)}
             />
             <small className='text-center'>
                 &copy; 2025 Pixel Coffee

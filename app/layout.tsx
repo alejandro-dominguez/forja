@@ -29,16 +29,14 @@ const RootLayout = ({
     return (
         <html lang='en' className='bg-darker/95'>
             <body
-                className={`
-                    flex flex-col overflow-x-hidden overflow-y-scroll min-h-svh
-                    bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
-                    mx-auto max-w-400 shadow shadow-darker/50
-                `}
+                suppressHydrationWarning={true}
+                className={`flex flex-col overflow-x-hidden overflow-y-scroll min-h-svh
+                bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
+                mx-auto max-w-400 shadow shadow-darker/50`}
+                id='scrollYBody'
             >
                 <Header />
-                <main className='flex-1 scroll-p-200'>
-                    <div className='-mt-12' />
-                    <div className='mt-16 md:mt-20' />
+                <main className='flex-1'>
                     {children}
                 </main>
                 <WhatsappBtn />

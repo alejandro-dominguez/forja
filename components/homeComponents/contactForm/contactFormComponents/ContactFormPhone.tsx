@@ -1,7 +1,7 @@
 const ContactFormPhone = () => {
     return (
         <div className='flex flex-col'>
-            <label className='flex gap-1 text-light font-bold'>
+            <label className='flex gap-1 font-bold'>
                 Teléfono
                 <span className='text-red-500 font-semibold'>
                     *

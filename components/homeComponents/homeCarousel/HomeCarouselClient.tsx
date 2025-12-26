@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import type { CarouselSlide } from './HomeCarouselServer';
 import HomeCarouselSlides from './homeCarouselComponents/HomeCarouselSlides';
 import HomeCarouselControls from './homeCarouselComponents/HomeCarouselControls';
+import { useEffect, useRef, useState } from 'react';
+import type { CarouselSlide } from './HomeCarouselServer';
 
 interface Props {
     slides: CarouselSlide[]
@@ -39,8 +39,8 @@ const HomeCarouselClient = ({ slides }: Props) => {
 
     return (
         <section
-            className='relative w-full h-[72svh] overflow-hidden
-            rounded shadow-xs shadow-sky-950/50 mb-7'
+            className='relative w-full h-[73svh] overflow-hidden
+            rounded shadow-xs shadow-sky-950/50 mb-[1.8rem]'
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >

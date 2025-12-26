@@ -20,7 +20,10 @@ const ContactSection = () => {
                 >
                     Déjanos Tu Mensaje
                 </h3>
-                <form className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 w-fit mx-auto'>
+                <form
+                    className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4
+                    w-fit mx-auto text-light/90'
+                >
                     <ContactFormName />
                     <ContactFormPhone />
                     <ContactFormEmail />

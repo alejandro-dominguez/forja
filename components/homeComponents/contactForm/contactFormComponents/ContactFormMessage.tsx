@@ -1,7 +1,7 @@
 const ContactFormMessage = () => {
     return (
         <div className='flex flex-col gap-1 md:col-span-2'>
-            <label className='flex gap-1 text-light font-bold'>
+            <label className='flex gap-1 font-bold'>
                 Mensaje
                 <span className='text-red-500 font-semibold'>
                     *

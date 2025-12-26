@@ -18,9 +18,7 @@ const FaqsQuestion = ({ question, isOpen, onClick }: Props) => {
             {question}
             <div className='p-1 cursor-pointer'>
                 <FaPlus
-                    className={`text-lg transition-transform ${
-                        isOpen ? 'rotate-45' : 'rotate-0'
-                    }`}
+                    className={`text-lg transition-transform ${isOpen ? 'rotate-45' : 'rotate-0'}`}
                 />
             </div>
         </button>
