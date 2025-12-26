@@ -1,9 +1,10 @@
 import Header from '@/components/layoutComponents/Header';
 import Footer from '@/components/layoutComponents/Footer';
 import WhatsappBtn from '@/components/layoutComponents/WhatsappBtn';
+import './globals.css';
 import { Montserrat, Dela_Gothic_One } from 'next/font/google';
 import type { Metadata } from 'next';
-import './globals.css';
+
 
 export const metadata: Metadata = {
     title: 'Forja Fitness',

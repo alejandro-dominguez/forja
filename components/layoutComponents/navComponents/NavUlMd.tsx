@@ -1,24 +1,31 @@
+'use client';
+
 import Link from 'next/link';
 import NavCartBtn from './NavCartBtn';
 import scrollToRef from '@/utils/scrollToRef';
 import { navItems } from '@/constants/navItems';
+import { usePathname } from 'next/navigation';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 
 interface Props {
     onToggle: (newValue: boolean) => void
 }
 
 const NavUlMd = ({ onToggle }: Props) => {
+    const pathname = usePathname()
+    const isCart = pathname.includes('/carrito')
+
     return (
-        <ul className='flex gap-4'>
+        <ul className={!isCart ? 'flex gap-4' : 'flex gap-4 mt-[.3rem]'}>
             {navItems.map(({ label, href }) => (
                 <li key={href} className='uppercase font-semibold hidden md:block'>
-                    <Link
+                    <DelayedLink
                         href={href}
                         className='nav-link'
-                        onClick={() => scrollToRef('scrollYBody', 0)}
+                        onBeforeNavigate={() => {scrollToRef('scrollYBody', 0)}}
                     >
                         {label}
-                    </Link>
+                    </DelayedLink>
                 </li>
             ))}
             <NavCartBtn onToggle={onToggle} />

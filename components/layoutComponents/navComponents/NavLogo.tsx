@@ -5,6 +5,7 @@ import logo from '@/public/logo-mobile.svg';
 import Link from 'next/link';
 import scrollToRef from '@/utils/scrollToRef';
 import { usePathname } from 'next/navigation';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 
 interface Props {
     onToggle: (newValue: boolean) => void
@@ -17,10 +18,7 @@ const NavLogo = ({ onToggle }: Props) => {
     if (isHome) {
         return (
             <button
-                onClick={() => {
-                    scrollToRef('scrollYBody', 0)
-                    onToggle(false)
-                }}
+                onClick={() => {scrollToRef('scrollYBody', 0), onToggle(false)}}
                 className='w-8 cursor-pointer outline-none block md:hidden z-50'
                 aria-label='ir arriba'
             >
@@ -30,16 +28,16 @@ const NavLogo = ({ onToggle }: Props) => {
     }
 
     return (
-        <Link
+        <DelayedLink
             href='/'
             className='w-8 outline-none block md:hidden z-50'
-            onClick={() => {
+            onBeforeNavigate={() => {
                 scrollToRef('scrollYBody', 0)
                 onToggle(false)
             }}
         >
             <Image src={logo} alt='Logo Forja' />
-        </Link>
+        </DelayedLink>
     )
 }
 

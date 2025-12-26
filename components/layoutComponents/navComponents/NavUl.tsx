@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import NavMenuBtn from './NavMenuBtn';
 import scrollToRef from '@/utils/scrollToRef';
+import DelayedLink from '@/components/customComponents/DelayedLink';
 import { navItems } from '@/constants/navItems';
 
 interface Props {
@@ -28,16 +28,16 @@ const NavUl = ({ isVisible, onToggle }: Props) => {
                                 key={href}
                                 className='uppercase font-semibold text-slate-700'
                             >
-                                <Link
+                                <DelayedLink
                                     href={href}
                                     className='nav-link md:py-2 mt-2'
-                                    onClick={() => {
+                                    onBeforeNavigate={() => {
                                         scrollToRef('scrollYBody', 0)
                                         onToggle(false)
                                     }}
                                 >
                                     {label}
-                                </Link>
+                                </DelayedLink>
                             </li>
                         ))}
                     </ul>

@@ -10,18 +10,18 @@ export interface CarouselSlide {
 
 const slides: CarouselSlide[] = [
     {
-        id: 0,
-        image: 'https://i.ibb.co/jkBmPpBz/clases-boxeo-galeria-5.png',
-        title: 'Boxeo, Funcional y Más',
-        cta: 'Descubrí todas nuestras clases y empezá a entrenar hoy',
-        href: '/actividades',
-    },
-    {
         id: 1,
         image: 'https://i.ibb.co/Z1GkFHG3/0-marcas-de-boxeo-thumb-1300x725.png',
         title: 'Visita Nuestra Tienda',
         cta: 'Explorá nuestra tienda y equipate con lo mejor para entrenar',
         href: '/tienda',
+    },
+    {
+        id: 0,
+        image: 'https://i.ibb.co/jkBmPpBz/clases-boxeo-galeria-5.png',
+        title: 'Boxeo, Funcional y Más',
+        cta: 'Descubrí todas nuestras clases y empezá a entrenar hoy',
+        href: '/actividades',
     },
     {
         id: 2,

@@ -11,7 +11,7 @@ const FooterFourthCol = () => {
             target='_blank'
             className='w-24'
         >
-            <Image src={logo} alt='Logo Forja' className=' drop-shadow-amber-50/20 drop-shadow-sm' />
+            <Image src={logo} alt='Logo Forja' className='drop-shadow-amber-50/20 drop-shadow-sm' />
         </Link>
     )
 }
