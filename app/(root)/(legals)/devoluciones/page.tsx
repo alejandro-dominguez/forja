@@ -1,10 +1,10 @@
 const Devoluciones = () => {
     return (
         <div className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
-            <h1 className='font-bold text-2xl mb-1'>
-                Devolución y Cambio de producto
+            <h1 className='legals-title'>
+                Devolución y Cambio de Producto
             </h1>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     El comprador podrá, realizar la devolución o cambio del producto 
                     comprado siempre que se encuentre en buen estado el paquete, cerrado, 

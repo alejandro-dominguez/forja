@@ -1,14 +1,14 @@
 const TerminosCondiciones = () => {
     return (
         <div className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
-            <h1 className='font-bold text-2xl mb-1'>
+            <h1 className='legals-title'>
                 Términos y Condiciones de Uso 
             </h1>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Gracias por visitar la página de términos y condiciones del sitio web 
                     Forja CUIT XX- XXXXXXXX-X, con domicilio legal en Calle Falsa 123, Ciudad 
-                    Rosario, Santa Fe; teléfono servicio al cliente Forja (0241) 15 XXXXXXX. 
+                    Rosario, Santa Fe; teléfono servicio al cliente Forja (341)-15-XXXXXXX. 
                     El acceso y uso del sitio web https://forja-fitness.com está sujeto a 
                     los siguientes Términos y Condiciones y a las leyes y demás normativa 
                     aplicable. Al acceder y navegar en el presente sitio, usted acepta estos 
@@ -34,10 +34,10 @@ const TerminosCondiciones = () => {
                     a cualquier tercero.
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Declaración de Limitación de Responsabilidad 
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     El sitio web se ofrece “tal como está” y “según esté disponible”. 
                     Forja no garantiza que el uso  del sitio web será sin interrupciones 
@@ -47,10 +47,10 @@ const TerminosCondiciones = () => {
                     Con la mayor extensión permitida por las leyes aplicables.
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Privacidad
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Somos conscientes de que los usuarios se preocupan sobre cómo va a 
                     usarse la información que proporcionan en línea a través del sitio 
@@ -59,10 +59,10 @@ const TerminosCondiciones = () => {
                     datos, ni se requerirán información sensible a la intimidad. 
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Compra de Productos en el sitio
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Forja vende sus productos en el sitio Web exclusivamente a consumidores 
                     finales, en forma minorista. Por ello solo se podrán comprar por este 
@@ -86,10 +86,10 @@ const TerminosCondiciones = () => {
                     comprador, para acordar formas de pago y ultimar detalles del envío.  
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Condiciones de Pago 
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Se podrá pagar con efectivo al momento de la entrega, transferencia 
                     (una vez impactado el pago) o tarjetas bancarias (tarjeta de crédito, 
@@ -105,10 +105,10 @@ const TerminosCondiciones = () => {
                     su ordenador antes de ser enviados al protocolo SSL.
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Tiempos de Entrega 
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Forja realizará la entrega en el domicilio dentro de la ciudad de 
                     Rosario registrado por el comprador a esos efectos durante el proceso 
@@ -117,8 +117,8 @@ const TerminosCondiciones = () => {
                 </p>
                 <p>
                     Las entregas se realizarán al día siguiente de haber tomado el pedido, 
-                    días hábiles en el horario de 10hs a 16hs. No se toman pedidos con 
-                    horario exacto, todos pueden varían en el rango horario establecido 
+                    días hábiles en el horario de 10:00 hs a 16:00 hs. No se toman pedidos
+                    con horario exacto, todos pueden varían en el rango horario establecido 
                     y acordado con Forja.
                 </p>
                 <p>
@@ -132,10 +132,10 @@ const TerminosCondiciones = () => {
                     luego de dicho excedente se cobra como un envío extra.
                 </p>
             </div>
-            <h2 className='font-bold text-[1.4rem] leading-7 md:leading-normal pt-2'>
+            <h2 className='legals-subtitle'>
                 Entrega fallida 
             </h2>
-            <div className='flex flex-col gap-1 text-[.975rem] leading-6 md:leading-normal md:text-base'>
+            <div className='legals-text-container'>
                 <p>
                     Si el primer envío falla por no encontrarse el cliente en el domicilio 
                     pactado, se cobrará al cliente la segunda vuelta del cadete. Si por algún 
