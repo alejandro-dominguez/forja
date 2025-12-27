@@ -56,7 +56,7 @@ const Faqs = () => {
             >
                 Preguntas Frecuentes
             </h2>
-            <div className='bg-darker rounded text-white shadow shadow-darker/50'>
+            <div className='bg-darker rounded text-white shadow shadow-darker/50 pt-2'>
                 {faqs.map(({ question, answer }, index) => {
                     const isOpen = openItems.includes(index)
 

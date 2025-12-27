@@ -25,7 +25,7 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                         {
                             title === ' ' ? null :
                             <h3 
-                                className='text-2xl sm:text-4xl font-extrabold pr-4 sm:pr-0
+                                className='text-3xl sm:text-4xl font-extrabold pr-4 sm:pr-0
                                 text-white text-shadow-sm text-shadow-sky-950/30 tracking-wide
                                 leading-7 sm:leading-normal'
                             >
