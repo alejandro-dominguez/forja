@@ -1,6 +1,6 @@
 const Devoluciones = () => {
     return (
-        <div className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
+        <section className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
             <h1 className='legals-title'>
                 Devolución y Cambio de Producto
             </h1>
@@ -20,7 +20,7 @@ const Devoluciones = () => {
                     Salvo que se deban a un error u omisión de Forja.
                 </p>
             </div>
-        </div>
+        </section>
     )
 }
 

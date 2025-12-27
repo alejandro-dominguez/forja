@@ -1,6 +1,6 @@
 const TerminosCondiciones = () => {
     return (
-        <div className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
+        <section className='flex flex-col gap-2 px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
             <h1 className='legals-title'>
                 Términos y Condiciones de Uso 
             </h1>
@@ -157,7 +157,7 @@ const TerminosCondiciones = () => {
                     momento mediante la actualización de esta publicación.
                 </p>
             </div>
-        </div>
+        </section>
     )
 }
 

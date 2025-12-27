@@ -27,7 +27,7 @@ const NavLogo = ({ onToggle }: Props) => {
         return (
             <button
                 onClick={handleClick}
-                className='w-28 md:w-32 cursor-pointer outline-none mt-[0.05rem] md:mt-[0.028rem]'
+                className='w-28 md:w-32 cursor-pointer outline-none mt-[0.05rem] md:mt-[0.028rem] z-50'
                 aria-label='ir arriba'
             >
                 <Image src={logo} alt='Logo Forja' />
@@ -38,7 +38,7 @@ const NavLogo = ({ onToggle }: Props) => {
     return (
         <DelayedLink
             href='/'
-            className='w-28 md:w-32 outline-none mt-[0.05rem] md:mt-[0.028rem]'
+            className='w-28 md:w-32 outline-none mt-[0.05rem] md:mt-[0.028rem] z-50'
             onBeforeNavigate={handleClick}
         >
             <Image src={logo} alt='Logo Forja' />
