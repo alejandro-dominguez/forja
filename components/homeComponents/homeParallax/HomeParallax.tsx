@@ -20,8 +20,9 @@ const HomeParallax = () => {
             style={{ backgroundImage: `url(${image})` }}
         >
             <span
-                className='font-dela-gothic-one tracking-widest uppercase z-10 text-center font-bold px-3
-                text-4xl md:text-[3.5rem] text-white text-shadow-md text-shadow-sky-950/40 sm:px-5'
+                className='font-dela-gothic-one tracking-widest uppercase z-10
+                text-center font-bold px-3 text-4xl md:text-[3.5rem] text-white
+                text-shadow-md text-shadow-sky-950/40 sm:px-5 leading-12 md:leading-normal'
             >
                 Desafiá tus límites
             </span>

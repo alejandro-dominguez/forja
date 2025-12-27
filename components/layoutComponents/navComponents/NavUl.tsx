@@ -30,7 +30,7 @@ const NavUl = ({ isVisible, onToggle }: Props) => {
                             >
                                 <DelayedLink
                                     href={href}
-                                    className='nav-link md:py-2 mt-2'
+                                    className='mt-2'
                                     onBeforeNavigate={() => {
                                         scrollToRef('scrollYBody', 0)
                                         onToggle(false)

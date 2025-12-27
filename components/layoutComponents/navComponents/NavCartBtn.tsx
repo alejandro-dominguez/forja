@@ -31,7 +31,6 @@ const NavCartBtn = ({ onToggle }: Props) => {
         <li className='z-50 mt-[.3rem] md:mt-0'>
             <DelayedLink
                 href='/carrito'
-                className='nav-link'
                 onBeforeNavigate={() => {
                     scrollToRef('scrollYBody', 0)
                     onToggle(false)
