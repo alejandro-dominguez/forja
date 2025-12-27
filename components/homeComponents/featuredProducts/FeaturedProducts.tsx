@@ -44,7 +44,7 @@ const FeaturedProducts = () => {
         <section className='mb-20'>
             <h2
                 className='mb-10 font-dela-gothic-one tracking-wide
-                text-dark text-center text-2xl md:text-4xl'
+                text-dark text-center text-2xl md:text-4xl uppercase'
             >
                 DESTACADOS
             </h2>
