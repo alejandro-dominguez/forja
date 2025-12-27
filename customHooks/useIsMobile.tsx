@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useIsMobile = (breakpoint: number = 768): boolean => {
+const useIsMobile = (breakpoint: number): boolean => {
     const [ isMobile, setIsMobile ] = useState<boolean>(() => {
         if (typeof window !== 'undefined' && window.visualViewport) {
             return window.visualViewport.width < breakpoint

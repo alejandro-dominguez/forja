@@ -1,9 +1,11 @@
 import numberFormater from '@/utils/numberFormater';
+
 type Props = {
     name: string
     description: string
     price: string
 }
+
 const FeaturedProductContent = ({ name, description, price }: Props) => {
     return (
         <div className='p-4 flex-1 flex flex-col'>

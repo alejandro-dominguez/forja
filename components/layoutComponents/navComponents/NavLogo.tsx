@@ -14,7 +14,7 @@ interface Props {
 const NavLogo = ({ onToggle }: Props) => {
     const pathname = usePathname()
     const isHome = pathname === '/'
-    const isMobile = useIsMobile()
+    const isMobile = useIsMobile(768)
 
     const handleClick = () => {
         scrollToRef('scrollYBody', 0)

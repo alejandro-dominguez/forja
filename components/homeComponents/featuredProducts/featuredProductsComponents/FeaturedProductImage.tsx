@@ -1,36 +1,48 @@
+'use client';
+
 import Image from 'next/image';
+import useIsMobile from '@/customHooks/useIsMobile';
+import { useRef, useState } from 'react';
 
 type Props = {
-    image: string
-    name: string
+  image: string
+  name: string
 }
 
 const FeaturedProductImage = ({ image, name }: Props) => {
+    const isMobile = useIsMobile(1024)
+    const containerRef = useRef<HTMLDivElement>(null)
+
+    const [ position, setPosition ] = useState({ x: 50, y: 50 })
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!containerRef.current) return
+
+        const rect = containerRef.current.getBoundingClientRect()
+        const x = ((e.clientX - rect.left) / rect.width) * 100
+        const y = ((e.clientY - rect.top) / rect.height) * 100
+
+        setPosition({ x, y })
+    }
+
     return (
-        <div className='h-52 w-full bg-white flex items-center justify-center'>
-            <img
+        <div
+            ref={containerRef}
+            onMouseMove={!isMobile ? handleMouseMove : undefined}
+            className='relative h-52 w-full bg-white overflow-hidden
+            flex items-center justify-center group cursor-zoom-in'
+        >
+            <Image
                 src={image}
                 alt={name}
-                className='h-full object-contain p-4'
+                fill
+                sizes='(max-width: 768px) 100vw, 25vw'
+                className={`object-contain p-4 transition-transform duration-300 ease-out
+                ${!isMobile ? 'group-hover:scale-150' : ''}`}
+                style={!isMobile? {transformOrigin: `${position.x}% ${position.y}%`} : undefined}
             />
         </div>
     )
 }
 
 export default FeaturedProductImage;
-
-// npm install react-image-magnify
-// Example Implementation
-// import ReactImageMagnify from 'react-image-magnify';
-//
-// export default function MagnifierImage({ src, width, height }) {
-//  return (
-//    <div style={{ width: '500px' }}>
-//      <ReactImageMagnify {...{
-//        smallImage: { alt: 'Product', isFluidWidth: true, src: src, width: width, height: height },
-//        largeImage: { src: src, width: width * 2, height: height * 2 },
-//        enlargedImageContainerDimensions: { width: '150%', height: '150%' }
-//      }} />
-//    </div>
-//  );
-// }

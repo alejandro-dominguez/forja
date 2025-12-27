@@ -6,7 +6,7 @@ export type GymEvent = {
     date: string
     description: string
     image: string
-    type: 'recent' | 'upcoming'
+    type: 'last' | 'upcoming'
 }
 
 const events: GymEvent[] = [
@@ -16,7 +16,7 @@ const events: GymEvent[] = [
         date: '15 de Marzo 2025',
         description: 'Entrenamiento intensivo enfocado en técnica, combinaciones y sparring controlado.',
         image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop',
-        type: 'recent',
+        type: 'last',
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const GymEvents = () => {
         <section className='mb-28'>
             <h2
                 className='mb-8 font-dela-gothic-one tracking-wide text-dark
-                text-center text-2xl md:text-4xl uppercase'
+                text-center text-3xl md:text-4xl uppercase'
             >
                 EVENTOS
             </h2>
