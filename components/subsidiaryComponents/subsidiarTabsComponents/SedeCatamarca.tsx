@@ -3,8 +3,8 @@ import SubsidiaryTabDays from './SubsidiaryTabDays';
 const SedeCatamarca = () => {
     return (
         <div className='text-white'>
-            <h3 className='text-3xl font-dela-gothic-one tracking-wide mb-5'>
-                Sede Catamarca
+            <h3 className='text-3xl font-dela-gothic-one tracking-wide mb-5 uppercase'>
+                SEDE CATAMARCA
             </h3>
             <div className='border-2 rounded-sm border-white/50 uppercase relative mt-12'>
                 {[

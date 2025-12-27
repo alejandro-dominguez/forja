@@ -30,7 +30,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
                 </span>
                 <h3
                     className='font-dela-gothic-one text-2xl tracking-wide
-                    text-shadow-sm text-shadow-sky-950/30'
+                    text-shadow-sm text-shadow-sky-950/30 uppercase'
                 >
                     {title}
                 </h3>
