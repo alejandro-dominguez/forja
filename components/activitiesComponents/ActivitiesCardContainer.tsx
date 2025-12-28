@@ -3,7 +3,7 @@ import { activities } from './activities.data'
 
 const ActivitiesCardContainer = () => {
     return (
-        <section className='min-h-svh sm:min-h-auto'>
+        <section>
             <div className='flex gap-7 overflow-x-auto pb-4 snap-x snap-mandatory sm:hidden'>
                 {activities.map(activity => (
                     <div
