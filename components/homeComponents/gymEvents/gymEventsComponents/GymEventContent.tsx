@@ -17,7 +17,7 @@ const GymEventContent = (event: GymEvent) => {
                     className='object-cover'
                 />
             </div>
-            <div className='p-4'>
+            <div className='p-3'>
                 <span className='text-lighter text-sm mb-1 block'>
                     {type === 'upcoming' ? 'evento próximo' : 'último evento'}
                 </span>

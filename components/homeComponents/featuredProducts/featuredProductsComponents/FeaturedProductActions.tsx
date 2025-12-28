@@ -5,7 +5,7 @@ type Props = {
 const FeaturedProductActions = ({ id }: Props) => {
     return (
         <div
-            className='px-4 pb-5 flex gap-6 text-white text-shadow
+            className='px-3 pb-5 flex gap-6 text-white text-shadow
             text-shadow-darker font-medium tracking-wide'
         >
             <button

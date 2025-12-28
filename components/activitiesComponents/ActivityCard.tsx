@@ -11,7 +11,7 @@ const ActivityCard = ({ activity }: Props) => {
     return (
         <article
             className='bg-darker shadow shadow-darker/50 text-white
-            flex flex-col border-2 border-darker rounded h-full'
+            flex flex-col border-4 border-darker rounded h-full'
         >
             <div className='relative h-60 w-full'>
                 <Image
@@ -21,7 +21,7 @@ const ActivityCard = ({ activity }: Props) => {
                     className='object-cover'
                 />
             </div>
-            <div className='p-4'>
+            <div className='p-3'>
                 <h3
                     className='mb-auto text-2xl font-extrabold
                     tracking-wider uppercase font-dela-gothic-one'
