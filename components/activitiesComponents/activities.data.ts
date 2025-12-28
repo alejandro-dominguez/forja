@@ -38,14 +38,14 @@ export const activities: Activity[] = [
     {
         id: 5,
         title: 'Muay Thai',
-        image: '/activities/muaythai.png',
+        image: '/activities/muay-thai.png',
         cta: 'El arte de las ocho armas',
         description: 'Disciplina tradicional tailandesa que utiliza puños, codos, rodillas y piernas. Entrenamientos intensos que forjan resistencia y carácter.',
     },
     {
         id: 6,
         title: 'Brazilian Jiu-Jitsu',
-        image: '/activities/bjj.png',
+        image: '/activities/brazilian-jiu-jitsu.png',
         cta: 'Control, técnica y estrategia',
         description: 'Arte marcial centrado en el combate en el suelo. Ideal para desarrollar técnica, paciencia y control, sin depender de la fuerza bruta.',
     },

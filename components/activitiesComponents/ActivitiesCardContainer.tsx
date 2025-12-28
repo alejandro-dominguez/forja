@@ -1,13 +1,20 @@
-import ActivityCard from './ActivityCard';
-import { activities } from './activities.data';
+import ActivityCard from './ActivityCard'
+import { activities } from './activities.data'
 
 const ActivitiesCardContainer = () => {
     return (
-        <section className='px-4 md:px-8'>
-            <div
-                className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-                gap-8 max-w-7xl mx-auto'
-            >
+        <section className='min-h-svh sm:min-h-auto'>
+            <div className='flex gap-7 overflow-x-auto pb-4 snap-x snap-mandatory sm:hidden'>
+                {activities.map(activity => (
+                    <div
+                        key={activity.id}
+                        className='min-w-[85%] snap-center'
+                    >
+                        <ActivityCard activity={activity} />
+                    </div>
+                ))}
+            </div>
+            <div className='hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto'>
                 {activities.map(activity => (
                     <ActivityCard
                         key={activity.id}
