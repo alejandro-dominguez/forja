@@ -7,7 +7,7 @@ const Sucursales = () => {
             <SubsidiaryCards />
             <h2
                 className='mt-6 font-dela-gothic-one tracking-wide text-dark
-                text-center text-3xl md:text-4xl uppercase'
+                text-center text-3xl md:text-4xl uppercase -mb-3 sm:mb-0'
             >
                 HORARIOS
             </h2>

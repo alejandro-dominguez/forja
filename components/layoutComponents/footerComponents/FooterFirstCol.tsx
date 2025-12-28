@@ -22,6 +22,7 @@ const FooterFirstCol = () => {
                 <DelayedLink
                     href='/sucursales'
                     onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
+                    className='font-normal -mt-1 mb-2 text-[.9rem]'
                 >
                     Sedes y Horarios
                 </DelayedLink>

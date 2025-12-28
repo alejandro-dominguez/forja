@@ -44,7 +44,7 @@ const SubsidiaryTabs = () => {
                     activeTab={activeTab}
                     setActiveTab={setActiveTab}
                 />
-                <div className='bg-darker/75 px-4 md:px-8 pt-24 pb-6 md:pb-8'>
+                <div className='bg-darker/75 px-4 md:px-8 pt-50 sm:pt-21 pb-6 md:pb-8'>
                     <AnimatePresence mode='wait'>
                         <motion.div
                             key={activeTab.id}
