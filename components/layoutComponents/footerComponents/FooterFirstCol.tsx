@@ -6,7 +6,7 @@ import { FaTruck } from 'react-icons/fa6';
 
 const FooterFirstCol = () => {
     return (
-        <div className='flex flex-col items-start gap-4 mr-11 md:mr-0'>
+        <div className='flex flex-col items-start gap-2 mr-11 md:mr-0'>
             <div className='flex flex-col gap-1'>
                 <h3 className='font-bold text-[.95rem]'>
                     Zona de Envíos
@@ -19,6 +19,12 @@ const FooterFirstCol = () => {
                 </div>
             </div>
             <div className='flex flex-col gap-1 font-extralight text-[.845rem]'>    
+                <DelayedLink
+                    href='/sucursales'
+                    onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
+                >
+                    Sedes y Horarios
+                </DelayedLink>
                 <DelayedLink
                     href='/terminos&condiciones'
                     onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}

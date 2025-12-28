@@ -3,10 +3,11 @@
 import SedeRoca from './subsidiarTabsComponents/SedeRoca';
 import SedeCatamarca from './subsidiarTabsComponents/SedeCatamarca';
 import SedeAvellaneda from './subsidiarTabsComponents/SedeAvellaneda';
+import SubsidiaryTabsControls from './subsidiarTabsComponents/SubsidiaryTabsControls';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useState } from 'react';
 
-type Tab = {
+export type Tab = {
     id: number
     label: string
     content: React.ReactNode
@@ -19,21 +20,9 @@ const contentVariants: Variants = {
 }
 
 const tabs: Tab[] = [
-    {
-        id: 1,
-        label: 'Sede Roca',
-        content: <SedeRoca />,
-    },
-    {
-        id: 2,
-        label: 'Sede Catamarca',
-        content: <SedeCatamarca />,
-    },
-    {
-        id: 3,
-        label: 'Sede Avellaneda',
-        content: <SedeAvellaneda />,
-    },
+    { id: 1, label: 'Sede Roca', content: <SedeRoca /> },
+    { id: 2, label: 'Sede Catamarca', content: <SedeCatamarca /> },
+    { id: 3, label: 'Sede Avellaneda', content: <SedeAvellaneda /> },
 ]
 
 const SubsidiaryTabs = () => {
@@ -50,33 +39,11 @@ const SubsidiaryTabs = () => {
                     backgroundPosition: 'center',
                 }}
             >
-                <div
-                    className='flex flex-col items-center sm:flex-row left-1/2 -translate-x-1/2
-                    sm:justify-center gap-3 sm:gap-8 absolute top-6'
-                >
-                    {tabs.map(tab => {
-                        const isActive = tab.id === activeTab.id
-
-                        return (
-                            <button
-                                key={tab.id}
-                                onClick={() => setActiveTab(tab)}
-                                className={`
-                                    relative px-5 py-2 font-semibold border-2 tracking-wide
-                                    rounded-md w-52 transition-all duration-200 ease-out
-                                    cursor-pointer shadow shadow-darker/50 hover:bg-white/10
-                                    ${
-                                        isActive ? 'text-white border-white/90 bg-white/10'
-                                        :
-                                            'text-white border-white/50 bg-transparent'
-                                    }
-                                `}
-                            >
-                                {tab.label}
-                            </button>
-                        )
-                    })}
-                </div>
+                <SubsidiaryTabsControls
+                    tabs={tabs}
+                    activeTab={activeTab}
+                    setActiveTab={setActiveTab}
+                />
                 <div className='bg-darker/75 px-4 md:px-8 pt-24 pb-6 md:pb-8'>
                     <AnimatePresence mode='wait'>
                         <motion.div

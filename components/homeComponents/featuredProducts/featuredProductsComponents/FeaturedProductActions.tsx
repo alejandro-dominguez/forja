@@ -11,14 +11,14 @@ const FeaturedProductActions = ({ id }: Props) => {
             <button
                 className='flex-1 grid place-items-center rounded-md border-2
                 border-white/90 shadow shadow-dark/40 text-[.9rem] font-semibold
-                transition hover:bg-white/10 cursor-pointer py-[.65rem]'
+                transition hover:bg-white/15 cursor-pointer py-[.65rem]'
             >
                 Agregar
             </button>
             <button
                 className='flex-1 grid place-items-center rounded-md border-2
                 border-white/50 shadow shadow-dark/40 text-[.9rem] font-semibold
-                transition hover:bg-white/10 cursor-pointer py-[.65rem]'
+                transition hover:bg-white/15 cursor-pointer py-[.65rem]'
             >
                 Ver más
             </button>

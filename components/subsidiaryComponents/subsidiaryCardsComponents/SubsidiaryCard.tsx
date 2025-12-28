@@ -7,7 +7,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
     const { title, location, activities, image } = subsidiary
 
     return (
-        <div
+        <article
             className='group bg-darker rounded border-4 border-darker shadow
             shadow-darker/50 overflow-hidden text-left relative'
         >
@@ -24,12 +24,12 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
             <div className='p-3 absolute top-0 text-white'>
                 <span
                     className='font-medium tracking-wide text-[.9rem]
-                    text-shadow-sm text-shadow-sky-950/30 mb-0.5'
+                    text-shadow-sm text-shadow-sky-950/30'
                 >
                     {location}
                 </span>
                 <h3
-                    className='font-dela-gothic-one text-2xl tracking-wide
+                    className='font-dela-gothic-one text-3xl tracking-wide leading-[2.15rem]
                     text-shadow-sm text-shadow-sky-950/30 uppercase'
                 >
                     {title}
@@ -43,7 +43,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
                     {activities}
                 </p>
             </div>
-        </div>
+        </article>
     )
 }
 
