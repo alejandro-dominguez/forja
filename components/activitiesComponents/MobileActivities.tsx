@@ -3,6 +3,7 @@ import { activities } from './activities.data';
 
 const MobileActivities = () => {
     return (
+        <>
         <div className='flex gap-7 overflow-x-auto pb-6 snap-x snap-mandatory sm:hidden'>
             {activities.map(activity => (
                 <div key={activity.id} className='min-w-[85%] snap-center'>
@@ -10,6 +11,12 @@ const MobileActivities = () => {
                 </div>
             ))}
         </div>
+        <h3
+            className='mt-4 text-dark tracking-wide text-lg font-semibold
+            text-center uppercase font-dela-gothic-one leading-6'>
+            ¡Comienza ahora<br />tus clases!
+        </h3>
+        </>
     )
 }
 

@@ -27,7 +27,7 @@ const SubsidiaryTabsControls = ({
                         onClick={() => setActiveTab(tab)}
                         className={`
                             relative px-5 py-2 font-mediums border-2 rounded-md
-                            w-45 lg:w-52 transition-all duration-200 cursor-pointer
+                            w-46 lg:w-52 transition-all duration-200 cursor-pointer
                             shadow shadow-dark/40 ease-out uppercase
                             ${
                                 isActive

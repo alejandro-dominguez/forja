@@ -35,7 +35,7 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                         {
                             cta === ' ' ? null :
                             <p
-                                className='text-white text-left -mt-2 sm:-mt-3 font-medium
+                                className='text-white text-left -mt-2 sm:-mt-5 font-medium
                                 text-shadow-sm text-shadow-sky-950/30 tracking-wide w-64 sm:w-72
                                 text-[.95rem] sm:text-[1.05rem] leading-[1.3rem] sm:leading-6'
                             >

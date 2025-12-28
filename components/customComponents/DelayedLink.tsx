@@ -13,7 +13,7 @@ interface DelayedLinkProps {
 }
 
 const DelayedLink = ({
-    href, children, delay = 500, onBeforeNavigate, className
+    href, children, delay = 350, onBeforeNavigate, className
 }: DelayedLinkProps) => {
     const router = useRouter()
 
