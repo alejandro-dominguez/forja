@@ -10,7 +10,7 @@ const NoCartItemsCard = () => {
     return (
         <DelayedLink
             href='/'
-            className='px-12 md:px-20 py-5 md:py-6 rounded-md bg-darker
+            className='px-12 md:px-20 py-5 md:py-4 rounded-md bg-darker
             shadow shadow-darker/50 text-white mt-9 flex w-fit mx-auto'
             onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
         >
