@@ -34,7 +34,7 @@ const subsidiaries: Subsidiary[] = [
     },
 ]
 
-const SubsidiaryCards = () => {
+const SubsidiaryCardsContainer = () => {
     return (
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7'>
             {subsidiaries.map(subsidiary => <SubsidiaryCard key={subsidiary.id} {...subsidiary} />)}
@@ -42,4 +42,4 @@ const SubsidiaryCards = () => {
     )
 }
 
-export default SubsidiaryCards;
+export default SubsidiaryCardsContainer;

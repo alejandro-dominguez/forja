@@ -36,7 +36,7 @@ const faqs: Faq[] = [
     },
 ]
 
-const Faqs = () => {
+const FaqsContainer = () => {
     const [ openItems, setOpenItems ] = useState<number[]>([])
 
     const toggleItem = (index: number) => {
@@ -79,4 +79,4 @@ const Faqs = () => {
     )
 }
 
-export default Faqs;
+export default FaqsContainer;

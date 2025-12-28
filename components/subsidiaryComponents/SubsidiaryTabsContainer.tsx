@@ -25,7 +25,7 @@ const tabs: Tab[] = [
     { id: 3, label: 'Sede Avellaneda', content: <SedeAvellaneda /> },
 ]
 
-const SubsidiaryTabs = () => {
+const SubsidiaryTabsContainer = () => {
     const [ activeTab, setActiveTab ] = useState<Tab>(tabs[0])
 
     return (
@@ -63,4 +63,4 @@ const SubsidiaryTabs = () => {
     )
 }
 
-export default SubsidiaryTabs;
+export default SubsidiaryTabsContainer;

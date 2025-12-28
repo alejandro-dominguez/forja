@@ -39,7 +39,7 @@ const products: Product[] = [
     },
 ]
 
-const FeaturedProducts = () => {
+const FeaturedProductsContainer = () => {
     return (
         <section className='mb-20'>
             <h2
@@ -57,4 +57,4 @@ const FeaturedProducts = () => {
     )
 }
 
-export default FeaturedProducts;
+export default FeaturedProductsContainer;

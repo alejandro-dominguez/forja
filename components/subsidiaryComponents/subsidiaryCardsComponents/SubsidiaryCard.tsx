@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import type { Subsidiary } from '../SubsidiaryCards';
+import type { Subsidiary } from '../SubsidiaryCardsContainer';
 
 const SubsidiaryCard = (subsidiary: Subsidiary) => {
     const { title, location, activities, image } = subsidiary
@@ -21,27 +21,29 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
                     duration-300 ease-out hover:scale-105 brightness-125'
                 />
             </div>
-            <div className='p-3 absolute top-51 md:top-0 text-white'>
-                <span
-                    className='font-medium tracking-wide text-[.9rem]
-                    text-shadow-sm text-shadow-sky-950/30'
-                >
-                    {location}
-                </span>
-                <h3
-                    className='font-dela-gothic-one text-3xl tracking-wide leading-[2.15rem]
-                    text-shadow-sm text-shadow-sky-950/30 uppercase'
-                >
-                    {title}
-                </h3>
-            </div>
-            <div className='p-3 pt-2 absolute bottom-0 bg-darker w-full text-sm'>
-                <p className='text-white'>
-                    <span className='text-lighter leading-normal mb-[.2rem]'>
-                        Actividades disponibles:
+            <div className='absolute bottom-0 w-full text-sm'>
+                <div className='px-3 text-white mb-2'>
+                    <span
+                        className='font-medium tracking-wide text-[.9rem]
+                        text-shadow-sm text-shadow-sky-950/30'
+                    >
+                        {location}
                     </span>
-                    {activities}
-                </p>
+                    <h3
+                        className='font-dela-gothic-one text-3xl tracking-wide leading-[2.15rem]
+                        text-shadow-sm text-shadow-sky-950/30 uppercase'
+                    >
+                        {title}
+                    </h3>
+                </div>
+                <div className='px-3 py-2 bg-darker'>
+                    <p className='text-white'>
+                        <span className='text-lighter leading-normal mb-[.2rem]'>
+                            Actividades disponibles:
+                        </span>
+                        {activities}
+                    </p>
+                </div>
             </div>
         </article>
     )

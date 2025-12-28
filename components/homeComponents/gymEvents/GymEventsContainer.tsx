@@ -28,7 +28,7 @@ const events: GymEvent[] = [
     },
 ]
 
-const GymEvents = () => {
+const GymEventsContainer = () => {
     return (
         <section className='mb-28'>
             <h2
@@ -44,4 +44,4 @@ const GymEvents = () => {
     )
 }
 
-export default GymEvents;
+export default GymEventsContainer;

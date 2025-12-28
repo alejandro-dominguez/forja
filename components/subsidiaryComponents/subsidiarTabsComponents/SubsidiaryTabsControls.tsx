@@ -1,6 +1,6 @@
 'use client';
 
-import type { Tab } from '../SubsidiaryTabs';
+import type { Tab } from '../SubsidiaryTabsContainer';
 
 type TabsControlsProps = {
     tabs: Tab[]
