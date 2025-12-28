@@ -20,14 +20,14 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                 >
                     <div
                         className='absolute inset-0 bg-black/40 flex flex-col
-                        justify-start items-start pt-3 pl-4 md:pt-4 md:pl-6 gap-4'
+                        justify-end items-start gap-4 pb-14 pl-4 md:pl-6'
                     >
                         {
                             title === ' ' ? null :
                             <h3 
                                 className='text-3xl sm:text-4xl font-extrabold pr-4 sm:pr-0
                                 text-white text-shadow-sm text-shadow-sky-950/30 tracking-wide
-                                leading-7 sm:leading-normal'
+                                leading-8 sm:leading-normal'
                             >
                                 {title}
                             </h3>

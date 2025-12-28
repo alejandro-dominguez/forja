@@ -21,7 +21,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
                     duration-300 ease-out hover:scale-105 brightness-125'
                 />
             </div>
-            <div className='p-3 absolute top-0 text-white'>
+            <div className='p-3 absolute top-51 md:top-0 text-white'>
                 <span
                     className='font-medium tracking-wide text-[.9rem]
                     text-shadow-sm text-shadow-sky-950/30'

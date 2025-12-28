@@ -49,7 +49,7 @@ const Faqs = () => {
     }
 
     return (
-        <section className='w-full mt-12 h-255 sm:h-185'>
+        <section className='w-full mt-12 h-auto sm:h-185 mb-40 sm:mb-0'>
             <h2
                 className='mb-[1.975rem] text-center text-3xl text-dark font-extrabold
                 tracking-tight leading-[2.05rem]'

@@ -11,7 +11,7 @@ const NoCartItemsCard = () => {
         <DelayedLink
             href='/'
             className='px-12 md:px-20 py-5 md:py-6 rounded-md bg-darker
-            shadow shadow-darker/50 text-white mx-auto mt-9'
+            shadow shadow-darker/50 text-white mt-9 flex w-fit mx-auto'
             onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
         >
             <div className='flex flex-col items-center gap-4'>
