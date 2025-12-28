@@ -10,7 +10,7 @@ const HomeCarouselLink = ({ href }: { href: string }) => {
             className='sm:px-4 sm:py-1.5 bg-white/60 text-slate-900
             font-semibold rounded-3xl hover:bg-white/80 transition-colors
             text-sm sm:text-base px-3 py-1 -mt-1 sm:mt-0.5'
-            onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
+            onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
         >
             Ver más
         </DelayedLink>

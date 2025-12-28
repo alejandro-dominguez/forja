@@ -11,7 +11,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
             className='group bg-darker rounded border-4 border-darker shadow
             shadow-darker/50 overflow-hidden text-left relative'
         >
-            <div className='relative h-110 w-full'>
+            <div className='relative h-100 w-full'>
                 <Image
                     src={image}
                     alt={title}

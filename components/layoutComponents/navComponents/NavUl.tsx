@@ -32,7 +32,7 @@ const NavUl = ({ isVisible, onToggle }: Props) => {
                                     href={href}
                                     className='mt-2'
                                     onBeforeNavigate={() => {
-                                        scrollToRef('scrollYBody', 0)
+                                        scrollToRef('scroll-y-Body', 0)
                                         onToggle(false)
                                     }}
                                 >

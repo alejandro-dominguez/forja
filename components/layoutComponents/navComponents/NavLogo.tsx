@@ -17,7 +17,7 @@ const NavLogo = ({ onToggle }: Props) => {
     const isMobile = useIsMobile(768)
 
     const handleClick = () => {
-        scrollToRef('scrollYBody', 0)
+        scrollToRef('scroll-y-Body', 0)
         if (isMobile) {
             onToggle(false)
         }

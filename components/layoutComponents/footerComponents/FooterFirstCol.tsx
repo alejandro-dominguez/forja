@@ -21,13 +21,13 @@ const FooterFirstCol = () => {
             <div className='flex flex-col gap-1 font-extralight text-[.845rem]'>    
                 <DelayedLink
                     href='/terminos&condiciones'
-                    onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
+                    onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
                 >
                     Términos y condiciones
                 </DelayedLink>
                 <DelayedLink
                     href='/devoluciones'
-                    onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}
+                    onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
                 >
                     Devoluciones
                 </DelayedLink>

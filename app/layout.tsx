@@ -34,7 +34,7 @@ const RootLayout = ({
                 className={`flex flex-col overflow-x-hidden overflow-y-scroll min-h-svh
                 bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
                 mx-auto max-w-400 shadow shadow-darker/50`}
-                id='scrollYBody'
+                id='scroll-y-Body'
             >
                 <Header />
                 <main className='flex-1'>

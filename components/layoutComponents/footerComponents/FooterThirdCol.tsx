@@ -9,7 +9,7 @@ const FooterThirdCol = () => {
             <BiSolidCaretUpCircle
                 size={30}
                 className='block cursor-pointer text-white transition-colors hover:text-lighter'
-                onClick={() => scrollToRef('scrollYBody', 0)}
+                onClick={() => scrollToRef('scroll-y-Body', 0)}
             />
             <small className='text-center'>
                 &copy; 2025 Pixel Coffee

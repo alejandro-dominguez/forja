@@ -21,7 +21,7 @@ const NavUlMd = ({ onToggle }: Props) => {
                     <DelayedLink
                         href={href}
                         className='nav-link'
-                        onBeforeNavigate={() => {scrollToRef('scrollYBody', 0)}}
+                        onBeforeNavigate={() => {scrollToRef('scroll-y-Body', 0)}}
                     >
                         {label}
                     </DelayedLink>

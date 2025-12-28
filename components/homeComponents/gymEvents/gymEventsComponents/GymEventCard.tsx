@@ -14,7 +14,7 @@ const GymEventCard = (event: GymEvent) => {
             className='bg-darker rounded border-4 border-darker shadow
             shadow-darker/50 overflow-hidden text-left'
         >
-            <DelayedLink href='/eventos' onBeforeNavigate={() => scrollToRef('scrollYBody', 0)}>
+            <DelayedLink href='/eventos' onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}>
                 <GymEventContent {...event} />
             </DelayedLink>
         </div>

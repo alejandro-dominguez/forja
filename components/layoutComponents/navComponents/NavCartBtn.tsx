@@ -18,7 +18,7 @@ const NavCartBtn = ({ onToggle }: Props) => {
             <li className='z-50 mt-[.3rem] md:mt-0'>
                 <button
                     className='cursor-pointer'
-                    onClick={() => {scrollToRef('scrollYBody', 0), onToggle(false)}}
+                    onClick={() => {scrollToRef('scroll-y-Body', 0), onToggle(false)}}
                     aria-label='ir arriba'
                 >
                     <FaCartShopping className='block text-3xl md:text-2xl' />
@@ -32,7 +32,7 @@ const NavCartBtn = ({ onToggle }: Props) => {
             <DelayedLink
                 href='/carrito'
                 onBeforeNavigate={() => {
-                    scrollToRef('scrollYBody', 0)
+                    scrollToRef('scroll-y-Body', 0)
                     onToggle(false)
                 }}
             >
