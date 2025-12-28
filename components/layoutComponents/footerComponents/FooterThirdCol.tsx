@@ -11,7 +11,7 @@ const FooterThirdCol = () => {
                 className='block cursor-pointer text-white transition-colors hover:text-lighter'
                 onClick={() => scrollToRef('scroll-y-Body', 0)}
             />
-            <small className='text-center'>
+            <small className='text-center hidden sm:block'>
                 &copy; 2025 Pixel Coffee
             </small>
         </div>

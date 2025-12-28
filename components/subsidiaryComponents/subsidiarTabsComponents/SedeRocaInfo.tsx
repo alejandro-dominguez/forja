@@ -4,7 +4,7 @@ const SedeRocaInfo = () => {
         <div>
             <h4
                 className='text-2xl leading-7 sm:leading-normal sm:text-3xl uppercase
-                font-dela-gothic-one tracking-wide mb-5 text-lighter mt-2'
+                font-dela-gothic-one tracking-wide mb-5 text-lighter mt-4 md:mt-2'
             >
                 Sábados
             </h4>
