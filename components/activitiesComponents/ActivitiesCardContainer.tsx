@@ -1,10 +1,14 @@
-import ActivityCard from './ActivityCard'
-import { activities } from './activities.data'
+import ActivityCard from './ActivityCard';
+import { activities } from './activities.data';
 
 const ActivitiesCardContainer = () => {
     return (
         <section>
-            <div className='flex gap-7 overflow-x-auto pb-4 snap-x snap-mandatory sm:hidden'>
+            <div
+                className='
+                    flex gap-7 overflow-x-auto pb-6 snap-x snap-mandatory sm:hidden
+                    scrollbar-thin scrollbar-thumb-main/80 scrollbar-track-darker/40'
+            >
                 {activities.map(activity => (
                     <div
                         key={activity.id}
