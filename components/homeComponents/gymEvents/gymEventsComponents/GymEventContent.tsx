@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import type { GymEvent } from '../GymEventsContainer';
+import type { GymEvent } from '../gymEvents.data';
 
 const GymEventContent = (event: GymEvent) => {
     const { title, date, description, image, type } = event

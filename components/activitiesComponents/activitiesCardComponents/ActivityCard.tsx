@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Activity } from './activities.data';
+import { Activity } from '../activities.data';
 
 type Props = {
     activity: Activity

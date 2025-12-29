@@ -3,7 +3,7 @@
 import GymEventContent from './GymEventContent';
 import DelayedLink from '@/components/customComponents/DelayedLink';
 import scrollToRef from '@/utils/scrollToRef';
-import type { GymEvent } from '../GymEventsContainer';
+import type { GymEvent } from '../gymEvents.data';
 
 const GymEventCard = (event: GymEvent) => {
     const { id, title, image } = event

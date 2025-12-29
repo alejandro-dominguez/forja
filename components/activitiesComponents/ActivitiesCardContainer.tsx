@@ -1,5 +1,5 @@
-import Activities from './Activities';
-import MobileActivities from './MobileActivities';
+import Activities from './activitiesCardComponents/Activities';
+import MobileActivities from './activitiesCardComponents/MobileActivities';
 
 const ActivitiesCardContainer = () => {
     return (

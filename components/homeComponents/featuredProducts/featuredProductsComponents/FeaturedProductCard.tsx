@@ -1,17 +1,10 @@
 import FeaturedProductImage from './FeaturedProductImage';
 import FeaturedProductActions from './FeaturedProductActions';
 import FeaturedProductContent from './FeaturedProductContent';
-
-type product = {
-    id: number
-    name: string
-    image: string
-    description: string
-    price: string
-}
+import type { FeaturedProduct } from '../featuredProducts.data';
 
 type Props = {
-    product: product
+    product: FeaturedProduct
 }
 
 const FeaturedProductCard = ({ product }: Props) => {

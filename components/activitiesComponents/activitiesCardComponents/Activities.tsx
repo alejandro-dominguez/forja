@@ -1,5 +1,5 @@
 import ActivityCard from './ActivityCard';
-import { activities } from './activities.data';
+import { activities } from '../activities.data';
 
 const Activities = () => {
     return (

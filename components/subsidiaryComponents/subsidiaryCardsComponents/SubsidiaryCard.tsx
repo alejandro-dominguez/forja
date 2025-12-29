@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import type { Subsidiary } from '../SubsidiaryCardsContainer';
+import type { Subsidiary } from '../subsidiries.data';
 
 const SubsidiaryCard = (subsidiary: Subsidiary) => {
     const { title, location, activities, image } = subsidiary
