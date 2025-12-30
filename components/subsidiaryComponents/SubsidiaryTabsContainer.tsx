@@ -29,7 +29,7 @@ const SubsidiaryTabsContainer = () => {
     const [ activeTab, setActiveTab ] = useState<Tab>(tabs[0])
 
     return (
-        <section className='mt-8 min-h-svh'>
+        <section className='mt-8 sm:min-h-svh'>
             <div
                 className='relative rounded overflow-hidden shadow
                 shadow-darker/50 transition-all ease-out duration-200'
