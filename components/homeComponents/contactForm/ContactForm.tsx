@@ -7,11 +7,11 @@ import ContactFormMessage from './contactFormComponents/ContactFormMessage';
 const ContactSection = () => {
     return (
         <section
-            className='relative grid place-items-center w-full h-125 md:h-108
-            bg-dark bg-cover bg-center bg-no-repeat rounded shadow shadow-darker/50'
+            className='relative grid place-items-center w-full h-125
+            md:h-108 bg-dark rounded shadow shadow-darker/50'
             style={{ backgroundImage: `url('https://i.ibb.co/FLbXtvcV/fondo-contacto.png')` }}
         >
-            <div className='absolute inset-0 bg-dark/60 rounded'/>
+            <div className='absolute inset-0 bg-dark/50 rounded'/>
             <div
                 className='relative z-10 bg-white shadow-lg
                 shadow-darker/50 py-5 px-7 sm:px-10 rounded'

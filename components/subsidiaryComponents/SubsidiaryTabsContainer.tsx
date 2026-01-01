@@ -8,7 +8,6 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useState } from 'react';
 
 export type Tab = {
-    id: number
     label: string
     content: React.ReactNode
 }
@@ -20,9 +19,9 @@ const contentVariants: Variants = {
 }
 
 const tabs: Tab[] = [
-    { id: 1, label: 'Sede Roca', content: <SedeRoca /> },
-    { id: 2, label: 'Sede Catamarca', content: <SedeCatamarca /> },
-    { id: 3, label: 'Sede Avellaneda', content: <SedeAvellaneda /> },
+    { label: 'Sede Roca', content: <SedeRoca /> },
+    { label: 'Sede Catamarca', content: <SedeCatamarca /> },
+    { label: 'Sede Avellaneda', content: <SedeAvellaneda /> },
 ]
 
 const SubsidiaryTabsContainer = () => {
@@ -33,21 +32,17 @@ const SubsidiaryTabsContainer = () => {
             <div
                 className='relative rounded overflow-hidden shadow
                 shadow-darker/50 transition-all ease-out duration-200'
-                style={{
-                    backgroundImage: `url(https://i.ibb.co/FLbXtvcV/fondo-contacto.png)`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
+                style={{ backgroundImage: `url(https://i.ibb.co/FLbXtvcV/fondo-contacto.png)` }}
             >
                 <SubsidiaryTabsControls
                     tabs={tabs}
                     activeTab={activeTab}
                     setActiveTab={setActiveTab}
                 />
-                <div className='bg-darker/75 px-4 md:px-8 pt-50 sm:pt-21 pb-6 md:pb-8'>
+                <div className='bg-dark/50 px-4 md:px-8 pt-50 sm:pt-21 pb-6 md:pb-8'>
                     <AnimatePresence mode='wait'>
                         <motion.div
-                            key={activeTab.id}
+                            key={activeTab.label}
                             variants={contentVariants}
                             initial='initial'
                             animate='animate'

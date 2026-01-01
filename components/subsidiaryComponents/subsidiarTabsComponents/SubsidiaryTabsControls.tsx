@@ -19,20 +19,20 @@ const SubsidiaryTabsControls = ({
             gap-4 sm:gap-5 md:gap-8 absolute top-5 sm:top-6 left-1/2 -translate-x-1/2'
         >
             {tabs.map(tab => {
-                const isActive = tab.id === activeTab.id
+                const isActive = tab.label === activeTab.label
 
                 return (
                     <button
-                        key={tab.id}
+                        key={tab.label}
                         onClick={() => setActiveTab(tab)}
                         className={`
-                            relative px-5 py-2 font-mediums border-2 rounded-md
+                            px-5 py-2 font-medium border-2 rounded-md
                             w-46 lg:w-52 transition-all duration-200 cursor-pointer
                             shadow shadow-dark/40 ease-out uppercase
                             ${
                                 isActive
                                     ? 'text-white border-white/90 bg-white/15'
-                                    : 'text-white border-white/50 bg-transparent hover:bg-white/5'
+                                    : 'text-white border-white/50 bg-transparent hover:bg-white/7'
                             }
                         `}
                     >

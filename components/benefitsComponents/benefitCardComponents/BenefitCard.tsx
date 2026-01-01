@@ -1,32 +1,31 @@
 import Image from 'next/image';
+import BenefitCardInfo from './BenefitCardInfo';
+import BenefitCardBtn from './BenefitCardBtn';
 import { Benefit } from '../benefits.data';
-import Link from 'next/link';
 
 type Props = {
     benefit: Benefit
 }
 
 const BenefitCard = ({ benefit }: Props) => {
-    const { image, title, href } = benefit
+    const { image, title, href, label, logo, discount } = benefit
 
     return (
         <article
             className='bg-darker shadow shadow-darker/50 text-white
-            flex flex-col border-4 border-darker rounded h-full'
+            flex flex-col border-4 border-darker rounded overflow-hidden'
         >
-            <Link
-                href={href}
-                referrerPolicy='no-referrer'
-                rel='noopener'
-                target='_blank'
-                className='relative h-68 md:h-82 w-full'>
+            <div className='relative h-70 w-full'>
+                <div className='absolute inset-0 bg-black/40 z-10' />
                 <Image
                     src={image}
                     alt={title}
                     fill
                     className='object-cover'
                 />
-            </Link>
+                <BenefitCardInfo logo={logo} title={title} discount={discount} />
+            </div>
+            <BenefitCardBtn href={href} label={label} />
         </article>
     )
 }

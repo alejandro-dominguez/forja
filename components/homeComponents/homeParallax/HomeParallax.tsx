@@ -15,8 +15,8 @@ const HomeParallax = () => {
     return (
         <section
             className={`relative grid place-items-center min-h-120 max-w-400 mx-auto
-            bg-cover bg-no-repeat bg-center bg-fixed before:content-['']
-            before:absolute before:inset-0 before:bg-black/90 before:opacity-50`}
+            bg-cover bg-center bg-fixed before:content-[''] before:absolute
+            before:inset-0 before:bg-black/90 before:opacity-50`}
             style={{ backgroundImage: `url(${image})` }}
         >
             <span

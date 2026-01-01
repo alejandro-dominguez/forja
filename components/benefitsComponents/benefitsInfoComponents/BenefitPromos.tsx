@@ -1,11 +1,11 @@
 const BenefitPromos = () => {
     return (
         <div
-            className='grid place-items-center text-center font-dela-gothic-one relative
-            pb-9 rounded shadow shadow-darker/50 bg-cover bg-center bg-no-repeat mt-5'
+            className='grid place-items-center text-center font-dela-gothic-one
+            relative pb-9 rounded shadow shadow-darker/50 mt-5'
             style={{ backgroundImage: `url('https://i.ibb.co/FLbXtvcV/fondo-contacto.png')` }}
         >
-            <div className='absolute inset-0 bg-darker/60 rounded' />
+            <div className='absolute inset-0 bg-darker/50 rounded' />
             <h3
                 className='text-lighter mt-6 font-dela-gothic-one
                 text-2xl sm:text3xl uppercase z-10'
