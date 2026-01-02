@@ -13,10 +13,10 @@ const BenefitCard = ({ benefit }: Props) => {
     return (
         <article
             className='bg-darker shadow shadow-darker/50 text-white
-            flex flex-col border-4 border-darker rounded overflow-hidden'
+            flex flex-col border-4 border-darker rounded'
         >
             <div className='relative h-70 w-full'>
-                <div className='absolute inset-0 bg-black/40 z-10' />
+                <div className='absolute inset-0 bg-black/30 z-10' />
                 <Image
                     src={image}
                     alt={title}

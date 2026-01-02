@@ -1,10 +1,8 @@
-'use client';
-
 import Image from 'next/image';
 import type { GymEvent } from '../gymEvents.data';
 
 const GymEventContent = (event: GymEvent) => {
-    const { title, date, description, image, type } = event
+    const { title, date, shortDescription, image } = event
 
     return (
         <>
@@ -18,14 +16,11 @@ const GymEventContent = (event: GymEvent) => {
                 />
             </div>
             <div className='p-3'>
-                <span className='text-lighter text-sm mb-1 block'>
-                    {type === 'upcoming' ? 'evento próximo' : 'último evento'}
-                </span>
                 <h3 className='font-dela-gothic-one text-2xl text-slate-100 my-1'>
                     {title}
                 </h3>
                 <p className='text-slate-200 leading-tight my-2'>
-                    {description}
+                    {shortDescription}
                 </p>
                 <p className='text-slate-300 text-sm'>
                     {date}

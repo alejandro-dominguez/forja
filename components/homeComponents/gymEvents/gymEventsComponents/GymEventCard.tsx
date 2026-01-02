@@ -1,24 +1,24 @@
-'use client';
+'use client'
 
-import GymEventContent from './GymEventContent';
-import DelayedLink from '@/components/customComponents/DelayedLink';
-import scrollToRef from '@/utils/scrollToRef';
-import type { GymEvent } from '../gymEvents.data';
+import GymEventContent from './GymEventContent'
+import DelayedLink from '@/components/customComponents/DelayedLink'
+import scrollToRef from '@/utils/scrollToRef'
+import type { GymEvent } from '../gymEvents.data'
 
 const GymEventCard = (event: GymEvent) => {
-    const { id, title, image } = event
-    
     return (
         <article
-            key={id}
-            className='bg-darker rounded border-4 border-darker shadow
-            shadow-darker/50 overflow-hidden text-left'
+            className='bg-darker rounded border-4 border-darker
+            shadow shadow-darker/50 overflow-hidden text-left'
         >
-            <DelayedLink href='/eventos' onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}>
+            <DelayedLink
+                href={`/eventos/${event.id}`}
+                onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
+            >
                 <GymEventContent {...event} />
             </DelayedLink>
         </article>
     )
 }
 
-export default GymEventCard;
+export default GymEventCard
