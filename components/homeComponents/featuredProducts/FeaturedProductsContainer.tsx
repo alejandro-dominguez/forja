@@ -1,5 +1,5 @@
-import FeaturedProductCard from './featuredProductsComponents/FeaturedProductCard';
-import { featuredProducts } from './featuredProducts.data';
+import ProductCard from '@/components/storeComponents/ProductCard';
+import { products } from '@/data/products.data';
 
 const FeaturedProductsContainer = () => {
     return (
@@ -11,8 +11,10 @@ const FeaturedProductsContainer = () => {
                 DESTACADOS
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-                {featuredProducts.map((product) => (
-                    <FeaturedProductCard key={product.id} product={product} />
+                {products.map((product) => (
+                    product.featured ?
+                        <ProductCard key={product.id} product={product} />
+                    : null
                 ))}
             </div>
         </section>

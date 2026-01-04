@@ -4,6 +4,7 @@ import WhatsappBtn from '@/components/layoutComponents/WhatsappBtn';
 import './globals.css';
 import { Montserrat, Dela_Gothic_One } from 'next/font/google';
 import type { Metadata } from 'next';
+import { CartProvider } from '@/context/CartContext';
 
 
 export const metadata: Metadata = {
@@ -36,12 +37,14 @@ const RootLayout = ({
                 mx-auto max-w-400 shadow shadow-darker/50`}
                 id='scroll-y-Body'
             >
-                <Header />
-                <main className='flex-1'>
-                    {children}
-                </main>
-                <WhatsappBtn />
-                <Footer />
+                <CartProvider>
+                    <Header />
+                    <main className='flex-1'>
+                        {children}
+                    </main>
+                    <WhatsappBtn />
+                    <Footer />
+                </CartProvider>
             </body>
         </html>
     )

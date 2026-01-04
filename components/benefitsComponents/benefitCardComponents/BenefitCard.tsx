@@ -16,7 +16,7 @@ const BenefitCard = ({ benefit }: Props) => {
             flex flex-col border-4 border-darker rounded'
         >
             <div className='relative h-70 w-full'>
-                <div className='absolute inset-0 bg-black/30 z-10' />
+                <div className='absolute inset-0 bg-black/50 z-10' />
                 <Image
                     src={image}
                     alt={title}

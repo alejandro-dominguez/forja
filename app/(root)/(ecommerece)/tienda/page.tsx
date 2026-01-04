@@ -1,8 +1,10 @@
+import ShopContainer from '@/components/storeComponents/ShopContainer';
+
 const Shop = () => {
     return (
-        <div className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
-            Tienda
-        </div>
+        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
+            <ShopContainer />
+        </section>
     )
 }
 

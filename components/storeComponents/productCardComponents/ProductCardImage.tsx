@@ -9,7 +9,7 @@ type Props = {
   name: string
 }
 
-const FeaturedProductImage = ({ image, name }: Props) => {
+const ProductCardImage = ({ image, name }: Props) => {
     const isMobile = useIsMobile(1024)
     const containerRef = useRef<HTMLDivElement>(null)
 
@@ -37,7 +37,7 @@ const FeaturedProductImage = ({ image, name }: Props) => {
                 alt={name}
                 fill
                 sizes='(max-width: 768px) 100vw, 25vw'
-                className={`object-contain p-4 transition-transform duration-300 ease-out
+                className={`object-cover p-3 transition-transform duration-300 ease-out bg-cover
                 ${!isMobile ? 'group-hover:scale-150' : ''}`}
                 style={!isMobile? {transformOrigin: `${position.x}% ${position.y}%`} : undefined}
             />
@@ -45,4 +45,4 @@ const FeaturedProductImage = ({ image, name }: Props) => {
     )
 }
 
-export default FeaturedProductImage;
+export default ProductCardImage;
