@@ -1,13 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-import numberFormater from '@/utils/numberFormater';
 import NoCartItemsCard from '@/components/cartComponents/NoCartItemsCard';
 import CartItemCard from '@/components/cartComponents/CartItemCard';
+import CartTotal from '@/components/cartComponents/CartTotal';
 import { useCart } from '@/context/CartContext';
 
 const CartPage = () => {
-    const { items, clearCart, totalPrice } = useCart()
+    const { items } = useCart()
 
     return (
         items.length === 0 ?
@@ -25,30 +24,7 @@ const CartPage = () => {
                             <CartItemCard key={item.id} item={item} />
                         ))}
                     </div>
-                    {/* RESUMEN */}
-                    <div className='bg-white rounded-lg p-6 shadow h-fit'>
-                        <div className='flex justify-between text-lg font-semibold'>
-                            <h3 className='text-xl font-semibold mb-4'>
-                                Total
-                            </h3>
-                            <span>
-                                {numberFormater(totalPrice)}
-                            </span>
-                        </div>
-                        <Link
-                            href='/checkout'
-                            className='mt-5 block w-full text-center bg-main
-                            text-white py-3 rounded font-semibold'
-                        >
-                            Proceder al pago
-                        </Link>
-                        <button
-                            onClick={clearCart}
-                            className='mt-3 w-full border py-2 rounded text-sm'
-                        >
-                            Vaciar carrito
-                        </button>
-                    </div>
+                    <CartTotal />
                 </div>
             </section>
     )

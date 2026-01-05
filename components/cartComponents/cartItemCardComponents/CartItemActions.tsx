@@ -7,7 +7,7 @@ const CartItemActions = ({ quantity, id }: { quantity: number; id: number }) => 
     const { increaseQty, decreaseQty, removeProduct } = useCart()
 
     return (
-        <div className='flex items-center gap-3 mt-4 sm:mt-7'>
+        <div className='flex items-center gap-3 mt-4 sm:mt-5'>
             <div className='flex gap-3 text-white'>
                 <button
                     onClick={() => decreaseQty(id)}

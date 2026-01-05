@@ -38,7 +38,9 @@ const ProductDetailActions = ({ product }: { product: Product }) => {
                 border-white/90 shadow shadow-black/20 py-2 text-white px-5
                 transition-colors hover:bg-white/15 cursor-pointer w-fit'
             >
-                Agregar al carrito
+                <span>
+                    Agregar al carrito
+                </span>
             </button>
         </div>
     )
