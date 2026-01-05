@@ -17,7 +17,7 @@ const ProductCardActions = ({ product }: Props) => {
             <button
                 onClick={() => addItem(product)}
                 className='flex-1 grid place-items-center rounded-md border-2
-                border-white/90 shadow text-[.9rem] py-[.65rem]
+                border-white/90 shadow shadow-black/20 text-[.9rem] py-[.65rem]
                 transition-colors hover:bg-white/15 cursor-pointer'
             >
                 Agregar
@@ -26,7 +26,7 @@ const ProductCardActions = ({ product }: Props) => {
                 href={`/tienda/${product.slug}`}
                 onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
                 className='flex-1 grid place-items-center rounded-md border-2
-                border-white/50 shadow text-[.9rem] py-[.65rem]
+                border-white/50 shadow shadow-black/20 text-[.9rem] py-[.65rem]
                 transition-colors hover:bg-white/15'
             >
                 Ver más

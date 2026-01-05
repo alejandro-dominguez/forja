@@ -12,12 +12,10 @@ const Evento = async ({ params }: Props) => {
 
     const event = events.find(e => e.id === Number(id))
 
-    if (!event) {
-        notFound()
-    }
+    if (!event) notFound()
 
     return (
-        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-6 mb-24'>
+        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
             <div
                 className='relative h-120 w-full shadow-darker/50
                 border-4 border-darker rounded shadow'

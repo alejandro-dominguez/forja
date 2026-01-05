@@ -1,7 +1,10 @@
 'use client';
 
 import scrollTop from '@/utils/scrollTop';
-import { BiSolidCaretRightCircle, BiSolidCaretLeftCircle } from 'react-icons/bi';
+import PaginationPrev from './paginationComponents/PaginationPrev';
+import PaginationNext from './paginationComponents/PaginationNext';
+import PaginationNumbers from './paginationComponents/PaginationNumbers';
+import { useEffect } from 'react';
 
 type Props = {
     total: number
@@ -16,44 +19,29 @@ const Pagination = ({ total, perPage, current, onChange }: Props) => {
     const goPrev = () => {
         if (current === 1) return
         onChange(current - 1)
-        scrollTop()
     }
+    
     const goNext = () => {
         if (current === pages) return
         onChange(current + 1)
-        scrollTop()
     }
+
+    useEffect(() => {
+        scrollTop()
+    }, [current])
 
     return (
         <div className='flex justify-center items-center gap-4 mt-4 text-xl font-medium'>
-            <button
-                onClick={goPrev}
-                className={`${current === 1 ? 'opacity-40 cursor-auto' : 'cursor-pointer'}`}
-            >
-                <BiSolidCaretLeftCircle size={22.5} className='text-darker' />
-            </button>
+            <PaginationPrev current={current} goPrev={goPrev} />
             {Array.from({ length: pages }).map((_, i) => (
-                <button
-                key={i}
-                onClick={() => {
-                    onChange(i + 1)
-                    scrollTop()
-                }}
-                className={
-                    current === i + 1
-                    ? 'font-bold underline underline-offset-2 text-dark'
-                    : 'cursor-pointer text-darker'
-                }
-                >
-                {i + 1}
-                </button>
+                <PaginationNumbers
+                    key={i}
+                    i={i}
+                    current={current}
+                    onChange={onChange}
+                />
             ))}
-            <button
-                onClick={goNext}
-                className={`${current === pages ? 'opacity-40 cursor-auto' : 'cursor-pointer'}`}
-            >
-                <BiSolidCaretRightCircle size={22.5} className='text-darker' />
-            </button>
+            <PaginationNext current={current} goNext={goNext} pages={pages} />
         </div>
     )
 }

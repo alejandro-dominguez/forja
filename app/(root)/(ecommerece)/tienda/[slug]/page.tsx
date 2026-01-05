@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import numberFormater from '@/utils/numberFormater';
+import ProductDetailActions from '@/components/storeComponents/productDetailComponents/ProductDetailActions';
 import { products } from '@/data/products.data';
 import { notFound } from 'next/navigation';
 
@@ -7,17 +10,38 @@ type Props = {
 
 const ProductDetail = async ({ params }: Props) => {
     const { slug } = await params
-
     const product = products.find(p => p.slug === slug)
+    
     if (!product) notFound()
 
+    const { image, name, longDescription, price } = product
+
     return (
-        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
-            <div className='p-6 space-y-6'>
-                <img src={product.image} className='h-64 mx-auto' />
-                <h1>{product.name}</h1>
-                <p>{product.longDescription}</p>
-                <p>${product.price}</p>
+        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5 min-h-svh'>
+            <div
+                className='grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 bg-darker rounded
+                shadow shadow-darker/50 text-white pt-4 pb-5 items-center px-4 lg:px-20'
+            >
+                <div className='relative w-full h-60 lg:h-75'>
+                    <Image
+                        src={image}
+                        alt={name}
+                        fill
+                        className='object-contain drop-shadow drop-shadow-black/20'
+                    />
+                </div>
+                <div className='space-y-5'>
+                    <h1 className='text-lg font-semibold leading-6'>
+                        {name}
+                    </h1>
+                    <p className='text-[.9rem] leading-5 -mt-1'>
+                        {longDescription}
+                    </p>
+                    <p className='font-medium text-[.95rem] -mt-2'>
+                        {numberFormater(price)}
+                    </p>
+                    <ProductDetailActions product={product} />
+                </div>
             </div>
         </section>
     )

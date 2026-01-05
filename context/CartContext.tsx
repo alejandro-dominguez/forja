@@ -24,7 +24,6 @@ const STORAGE_KEY = 'forja-cart'
 
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const [items, setItems] = useState<CartItem[]>([])
-
     /* =========================
         Inicializar desde localStorage
     ========================= */
@@ -38,18 +37,15 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
             console.error('Error leyendo carrito:', error)
         }
     }, [])
-
   /* =========================
      Persistir en localStorage
      ========================= */
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
     }, [items])
-
   /* =========================
      Métodos públicos
      ========================= */
-
     const addItem = (product: Product) => {
         setItems(prev => {
             const existing = prev.find(p => p.id === product.id)
@@ -67,13 +63,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }
 
     const increaseQty = (id: number) => {
-        setItems(prev => prev.map(p => p.id === id ? { ...p, quantity: p.quantity + 1 } : p))
+        setItems(prev => prev.map(p => p.id === id ? {...p, quantity: p.quantity + 1} : p))
     }
 
     const decreaseQty = (id: number) => {
-        setItems(prev => prev.map(p => p.id === id ? { ...p, quantity: p.quantity - 1 } : p)
-            .filter(p => p.quantity > 0)
-        )
+        setItems(prev => prev.map(p => p.id === id ? {...p, quantity: Math.max(1, p.quantity - 1)} : p))
     }
 
     const removeProduct = (id: number) => {

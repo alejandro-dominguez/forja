@@ -17,11 +17,11 @@ const Filters = ({ filters, onChange }: Props) => {
             <select
                 value={filters.category}
                 onChange={e =>
-                onChange({
-                    ...filters,
-                    category: e.target.value,
-                    brand: 'all',
-                })
+                    onChange({
+                        ...filters,
+                        category: e.target.value,
+                        brand: 'all',
+                    })
                 }
             >
                 <option value='all'>Todas las categorías</option>

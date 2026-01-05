@@ -10,7 +10,7 @@ type Props = {
 }
 
 const ProductCardImage = ({ image, name }: Props) => {
-    const isMobile = useIsMobile(1024)
+    const isMobile = useIsMobile(768)
     const containerRef = useRef<HTMLDivElement>(null)
 
     const [ position, setPosition ] = useState({ x: 50, y: 50 })

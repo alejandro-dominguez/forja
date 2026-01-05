@@ -14,7 +14,7 @@ const Eventos = () => {
     )
 
     return (
-        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-6 mb-24'>
+        <section className='px-3 sm:px-5 md:px-16 lg:px-24 mt-4 md:mt-5'>
             <h1 className='text-4xl font-dela-gothic-one mb-6 uppercase text-transparent'>
                 EVENTOS
             </h1>
