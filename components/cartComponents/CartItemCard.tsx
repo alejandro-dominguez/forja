@@ -10,11 +10,11 @@ const CartItemCard = ({ item }: { item: CartItem }) => {
 
     return (
         <div
-            className='flex flex-col sm:flex-row gap-2 sm:gap-4
-            bg-darker rounded p-4 shadow shadow-darker/50'
+            className='bg-darker rounded p-4 shadow-darker/50
+            flex flex-col gap-3 sm:flex-row sm:gap-4 shadow'
         >
             <CartItemImg slug={slug} image={image} name={name} />
-            <div className='flex-1'>
+            <div className='flex-1 flex flex-col'>
                 <h3 className='font-semibold text-white/95 mt-0.5'>
                     {name}
                 </h3>

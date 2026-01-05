@@ -5,7 +5,7 @@ import './globals.css';
 import { Montserrat, Dela_Gothic_One } from 'next/font/google';
 import type { Metadata } from 'next';
 import { CartProvider } from '@/context/CartContext';
-
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
     title: 'Forja Fitness',
@@ -45,6 +45,19 @@ const RootLayout = ({
                     <WhatsappBtn />
                     <Footer />
                 </CartProvider>
+                <Toaster
+                    position='top-center'
+                    containerStyle={{
+                        top: '4.5rem',
+                    }}
+                    toastOptions={{
+                        duration: 2500,
+                        style: {
+                            background: '#03033D',
+                            color: '#fff',
+                        },
+                    }}
+                />
             </body>
         </html>
     )

@@ -1,12 +1,23 @@
+'use client';
+
 import scrollToRef from '@/utils/scrollToRef';
 import DelayedLink from '../customComponents/DelayedLink';
 import numberFormater from '@/utils/numberFormater';
+import ClearCartPopUp from './ClearCartPopUp';
 import { useCart } from '@/context/CartContext';
+import { useState } from 'react';
 
 const CartTotal = () => {
     const { totalPrice, clearCart } = useCart()
+    const [ showConfirm, setShowConfirm ] = useState(false)
+
+    const handleConfirmClear = () => {
+        clearCart()
+        setShowConfirm(false)
+    }
 
     return (
+        <>
         <div className='bg-dark rounded p-4 h-fit shadow shadow-darker/50 text-white'>
             <div className='flex justify-between text-lg font-semibold'>
                 <h3 className='text-lg font-bold mb-1 tracking-wide'>
@@ -26,7 +37,7 @@ const CartTotal = () => {
                     Proceder al pago
                 </DelayedLink>
                 <button
-                    onClick={clearCart}
+                    onClick={() => setShowConfirm(true)}
                     className='rounded-md border-2 mt-3 text-center py-2
                     border-white/90 shadow shadow-black/10 font-medium
                     transition-colors hover:bg-white/15 cursor-pointer'
@@ -35,6 +46,13 @@ const CartTotal = () => {
                 </button>
             </div>
         </div>
+        {showConfirm && (
+            <ClearCartPopUp
+                onConfirm={handleConfirmClear}
+                onCancel={() => setShowConfirm(false)}
+            />
+        )}
+        </>
     )
 }
 

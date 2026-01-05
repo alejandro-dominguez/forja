@@ -1,5 +1,6 @@
 'use client';
 
+import toast from 'react-hot-toast';
 import { BiSolidPlusCircle, BiSolidMinusCircle } from 'react-icons/bi';
 import { useCart } from '@/context/CartContext';
 import { useState } from 'react';
@@ -9,7 +10,11 @@ const ProductDetailActions = ({ product }: { product: Product }) => {
     const { addItem } = useCart()
     const [ qty, setQty ] = useState(1)
     
-    const handleAdd = () => { for (let i = 0; i < qty; i++) addItem(product) }
+    const handleAdd = () => {
+        for (let i = 0; i < qty; i++) addItem(product)
+        toast.success(`¡${qty} Unidad/es Agregadas!`)
+        setQty(1)
+    }
     
     return (
         <div className='flex flex-col gap-5 items-start w-fit mt-5 mx-auto md:mx-0'>

@@ -12,7 +12,7 @@ type Props = {
 
 const CartItemImg = ({ slug, image, name }: Props) => {
     return (
-        <div className='relative w-24 h-24'>
+        <div className='relative w-full h-46 sm:w-24 sm:h-24'>
             <DelayedLink
                 href={`/tienda/${slug}`}
                 onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
