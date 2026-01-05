@@ -1,6 +1,7 @@
-const ContactFormPhone = () => {
+
+const CheckoutFormPhone = () => {
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col mt-1'>
             <label className='flex gap-1 font-bold'>
                 Teléfono
                 <span className='text-red-500 font-semibold'>
@@ -17,4 +18,4 @@ const ContactFormPhone = () => {
     )
 }
 
-export default ContactFormPhone;
+export default CheckoutFormPhone;

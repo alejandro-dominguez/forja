@@ -8,6 +8,7 @@ const ContactFormMessage = () => {
                 </span>
             </label>
             <textarea
+                required
                 rows={2}
                 placeholder='Escribe tu mensaje aquí'
                 className='border-b border-main mt-1 pb-1 text-slate-700 placeholder:text-slate-400'

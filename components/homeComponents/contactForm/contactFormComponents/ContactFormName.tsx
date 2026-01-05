@@ -8,6 +8,7 @@ const ContactFormName = () => {
                 </span>
             </label>
             <input
+                required
                 type='text'
                 placeholder='Nombre completo'
                 className='border-b border-main mt-1 pb-1 text-slate-700 placeholder:text-slate-400'
