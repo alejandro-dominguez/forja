@@ -18,7 +18,7 @@ const ProductDetailActions = ({ product }: { product: Product }) => {
                     onClick={() => setQty(q => Math.max(1, q - 1))}
                     className='cursor-pointer'
                 >
-                    <BiSolidMinusCircle size={22} color='#F93E26' />
+                    <BiSolidMinusCircle size={22} />
                 </button>
                     <div className='font-medium w-10 grid place-items-center text-lg'>
                         <span>
@@ -29,7 +29,7 @@ const ProductDetailActions = ({ product }: { product: Product }) => {
                     onClick={() => setQty(q => q + 1)}
                     className='cursor-pointer'
                 >
-                    <BiSolidPlusCircle size={22} className='text-light' />
+                    <BiSolidPlusCircle size={22} />
                 </button>
             </div>
             <button
