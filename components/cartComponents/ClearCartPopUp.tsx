@@ -12,26 +12,26 @@ const ClearCartPopUp = ({ onConfirm, onCancel }: Props) => {
             onClick={onCancel}
         >
             <div
-                className='bg-dark text-white rounded-lg p-6 w-[90%] max-w-sm shadow-lg'
-                onClick={e => e.stopPropagation()} // 👈 evita cerrar al clickear dentro
+                className='bg-dark text-white rounded p-5 max-w-sm shadow-lg'
+                onClick={e => e.stopPropagation()}
             >
-                <h3 className='text-lg font-semibold mb-3'>
+                <h3 className='text-lg font-semibold mb-1'>
                     Vaciar carrito
                 </h3>
-                <p className='text-sm text-white/80 mb-5'>
+                <p className='text-[.95rem] text-white/80 mb-6'>
                     ¿Seguro que deseas vaciar tu carrito?
                 </p>
-                <div className='flex justify-end gap-3'>
+                <div className='flex justify-between'>
                     <button
                         onClick={onConfirm}
-                        className='px-4 py-2 rounded-md bg-red-600 cursor-pointer
-                        hover:bg-red-700 transition-colors font-medium'
+                        className='px-6 py-2 rounded bg-red-600/90 cursor-pointer
+                        hover:bg-red-700/90 transition-colors font-medium'
                     >
                         Vaciar
                     </button>
                     <button
                         onClick={onCancel}
-                        className='px-4 py-2 rounded-md border border-white/50
+                        className='px-4 py-2 rounded border-2 border-white/50
                         hover:bg-white/10 transition-colors cursor-pointer'
                     >
                         Cancelar
