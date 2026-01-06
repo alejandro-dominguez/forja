@@ -37,7 +37,7 @@ const ProductCardImage = ({ image, name }: Props) => {
                 alt={name}
                 fill
                 sizes='(max-width: 768px) 100vw, 25vw'
-                className={`object-cover p-3 transition-transform duration-300 ease-out bg-cover
+                className={`object-cover transition-transform duration-300 ease-out
                 ${!isMobile ? 'group-hover:scale-150' : ''}`}
                 style={!isMobile? {transformOrigin: `${position.x}% ${position.y}%`} : undefined}
             />
