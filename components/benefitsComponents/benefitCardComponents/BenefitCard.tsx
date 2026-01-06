@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import BenefitCardInfo from './BenefitCardInfo';
 import BenefitCardBtn from './BenefitCardBtn';
+import BenefitCardImg from './BenefitCardImg';
 import { Benefit } from '../benefits.data';
 
 type Props = {
@@ -16,13 +16,7 @@ const BenefitCard = ({ benefit }: Props) => {
             flex flex-col border-4 border-darker rounded'
         >
             <div className='relative h-70 w-full'>
-                <div className='absolute inset-0 bg-black/50 z-10' />
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    className='object-cover'
-                />
+                <BenefitCardImg title={title} image={image} />
                 <BenefitCardInfo logo={logo} title={title} discount={discount} />
             </div>
             <BenefitCardBtn href={href} label={label} />

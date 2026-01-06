@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import GymEventContent from './GymEventContent'
-import DelayedLink from '@/components/customComponents/DelayedLink'
-import scrollToRef from '@/utils/scrollToRef'
-import type { GymEvent } from '../gymEvents.data'
+import GymEventContent from './GymEventContent';
+import DelayedLink from '@/components/customComponents/DelayedLink';
+import scrollToRef from '@/utils/scrollToRef';
+import type { GymEvent } from '../gymEvents.data';
 
 const GymEventCard = (event: GymEvent) => {
     return (

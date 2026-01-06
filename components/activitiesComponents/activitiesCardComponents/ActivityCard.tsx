@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ActivityCardImg from './ActivityCardImg';
 import { Activity } from '../activities.data';
 
 type Props = {
@@ -13,14 +13,7 @@ const ActivityCard = ({ activity }: Props) => {
             className='bg-darker shadow shadow-darker/50 text-white
             flex flex-col border-4 border-darker rounded h-full'
         >
-            <div className='relative h-60 w-full'>
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    className='object-cover'
-                />
-            </div>
+            <ActivityCardImg title={title} image={image} />
             <div className='p-3'>
                 <h3
                     className='mb-auto text-2xl font-extrabold

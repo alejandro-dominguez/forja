@@ -1,7 +1,5 @@
-'use client';
-
-import Image from 'next/image';
 import type { Subsidiary } from '../subsidiries.data';
+import SubsidiaryCardImg from './SubsidiaryCardImg';
 
 const SubsidiaryCard = (subsidiary: Subsidiary) => {
     const { title, location, activities, image } = subsidiary
@@ -11,16 +9,7 @@ const SubsidiaryCard = (subsidiary: Subsidiary) => {
             className='group bg-darker rounded border-4 border-darker shadow
             shadow-darker/50 overflow-hidden text-left relative'
         >
-            <div className='relative h-100 w-full'>
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    sizes='(max-width: 1024px) 100vw, 33vw'
-                    className='object-cover transition-transform
-                    duration-300 ease-out hover:scale-105 brightness-125'
-                />
-            </div>
+            <SubsidiaryCardImg title={title} image={image} />
             <div className='absolute bottom-0 w-full text-sm'>
                 <div className='px-3 text-white mb-2'>
                     <span

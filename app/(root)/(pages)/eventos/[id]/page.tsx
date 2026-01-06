@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { events } from '@/components/homeComponents/gymEvents/gymEvents.data';
+import EventDetailImg from '@/components/eventComponents/EventDetailImg';
 
 type Props = {
     params: Promise<{ id: string }>
@@ -20,13 +21,7 @@ const Evento = async ({ params }: Props) => {
                 className='relative h-120 w-full shadow-darker/50
                 border-4 border-darker rounded shadow'
             >
-                <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    className='object-cover'
-                />
-                <div className='absolute inset-0 bg-black/30 z-10' />
+                <EventDetailImg title={event.title} image={event.image} />
                 <div className='absolute bottom-0 z-10 bg-darker w-full p-3 flex flex-col gap-2'>
                     <h1
                         className='font-dela-gothic-one tracking-wide

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import numberFormater from '@/utils/numberFormater';
 import ProductDetailActions from '@/components/storeComponents/productDetailComponents/ProductDetailActions';
+import ProductDetailImg from '@/components/storeComponents/productDetailComponents/ProductDetailImg';
 import { products } from '@/data/products.data';
 import { notFound } from 'next/navigation';
 
@@ -22,14 +22,7 @@ const ProductDetail = async ({ params }: Props) => {
                 className='grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 bg-darker rounded
                 shadow shadow-darker/50 text-white pt-4 pb-5 items-center px-4 lg:px-20'
             >
-                <div className='relative w-full h-60 lg:h-75'>
-                    <Image
-                        src={image}
-                        alt={name}
-                        fill
-                        className='object-contain drop-shadow drop-shadow-black/20'
-                    />
-                </div>
+                <ProductDetailImg image={image} name={name} />
                 <div className='space-y-5'>
                     <h1 className='text-lg font-semibold leading-6'>
                         {name}
