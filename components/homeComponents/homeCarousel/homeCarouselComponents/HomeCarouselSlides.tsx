@@ -19,7 +19,7 @@ const HomeCarouselSlides = ({ slides, index }: Props) => {
                     style={{ backgroundImage: `url(${image})` }}
                 >
                     <div
-                        className='absolute inset-0 bg-black/40 flex flex-col
+                        className='absolute inset-0 bg-black/30 flex flex-col
                         justify-end items-start gap-4 pb-14 pl-4 md:pl-6'
                     >
                         {

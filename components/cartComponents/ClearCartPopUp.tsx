@@ -12,7 +12,7 @@ const ClearCartPopUp = ({ onConfirm, onCancel }: Props) => {
             onClick={onCancel}
         >
             <div
-                className='bg-dark text-white rounded p-5 max-w-sm shadow-lg'
+                className='bg-darker text-white rounded p-5 max-w-sm shadow-lg'
                 onClick={e => e.stopPropagation()}
             >
                 <h3 className='text-lg font-semibold mb-1'>
@@ -25,7 +25,7 @@ const ClearCartPopUp = ({ onConfirm, onCancel }: Props) => {
                     <button
                         onClick={onConfirm}
                         className='px-6 py-2 rounded bg-red-600/90 cursor-pointer
-                        hover:bg-red-700/90 transition-colors font-medium'
+                        hover:bg-red-500/90 transition-colors font-medium'
                     >
                         Vaciar
                     </button>

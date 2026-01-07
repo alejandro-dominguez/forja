@@ -11,13 +11,13 @@ const ShopContainer = () => {
     const isMobile = useIsMobile(768)
     const ITEMS_PER_PAGE = isMobile ? 4 : 8
 
-    const [ filters, setFilters ] = useState({
+    const [filters, setFilters] = useState({
         category: 'all',
         brand: 'all',
         search: '',
     })
 
-    const [ page, setPage ] = useState(1)
+    const [page, setPage] = useState(1)
 
     const filtered = useMemo(() => {
         setPage(1)
@@ -34,24 +34,34 @@ const ShopContainer = () => {
         })
     }, [filters])
 
-  const start = (page - 1) * ITEMS_PER_PAGE
-  const paginated = filtered.slice(start, start + ITEMS_PER_PAGE)
+    const start = (page - 1) * ITEMS_PER_PAGE
+    const paginated = filtered.slice(start, start + ITEMS_PER_PAGE)
 
     return (
-        <>
-        <Filters filters={filters} onChange={setFilters} />
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4'>
-            {paginated.map(p => (
-                <ProductCard key={p.id} product={p} />
-            ))}
+        <div className='min-h-115 flex flex-col'>
+            <Filters filters={filters} onChange={setFilters} />
+            {filtered.length === 0 ?
+                <div className='flex-1 grid place-items-center'>
+                    <p className='text-lg font-medium text-darker/70 text-center'>
+                        No se han encontrado productos
+                    </p>
+                </div>
+                :
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4'>
+                        {paginated.map(p => (
+                            <ProductCard key={p.id} product={p} />
+                        ))}
+                    </div>
+            }
+            <div className='mt-auto'>
+                <Pagination
+                    total={filtered.length}
+                    perPage={ITEMS_PER_PAGE}
+                    current={page}
+                    onChange={setPage}
+                />
+            </div>
         </div>
-        <Pagination
-            total={filtered.length}
-            perPage={ITEMS_PER_PAGE}
-            current={page}
-            onChange={setPage}
-        />
-        </>
     )
 }
 
