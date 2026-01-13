@@ -29,7 +29,7 @@ const ProductCardImage = ({ image, name }: Props) => {
         <div
             ref={containerRef}
             onMouseMove={!isMobile ? handleMouseMove : undefined}
-            className='relative h-52 w-full bg-white overflow-hidden
+            className='relative h-75 md:h-56 w-full bg-white overflow-hidden
             flex items-center justify-center group cursor-zoom-in'
         >
             <Image
