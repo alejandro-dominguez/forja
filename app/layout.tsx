@@ -31,7 +31,6 @@ const RootLayout = ({
     return (
         <html lang='en' className='bg-darker/95'>
             <body
-                suppressHydrationWarning={true}
                 className={`flex flex-col overflow-x-hidden overflow-y-scroll min-h-svh
                 bg-slate-200 antialiased ${montserrat.variable} ${delaGothicOne.variable}
                 mx-auto max-w-400 shadow shadow-darker/50`}

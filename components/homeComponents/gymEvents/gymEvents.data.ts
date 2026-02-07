@@ -24,7 +24,7 @@ export const events: GymEvent[] = [
     {
         id: 2,
         title: 'Seminario de MMA',
-        date: '08/12/2025',
+        date: '10/12/2026',
         location: 'Sede Avellaneda',
         shortDescription: 'Seminario enfocado en lucha, control y transiciones en el suelo.',
         longDescription:
@@ -61,6 +61,18 @@ export const events: GymEvent[] = [
         id: 5,
         title: 'Workshop de Fuerza',
         date: '10/02/2025',
+        location: 'Sede Roca',
+        shortDescription: 'Entrenamiento funcional enfocado en fuerza, potencia y resistencia.',
+        longDescription:
+        'El Workshop de Fuerza y Acondicionamiento estuvo diseñado para mejorar el rendimiento físico general de los atletas, con un enfoque específico en deportes de combate. Se trabajaron patrones básicos de movimiento, ejercicios de fuerza funcional y desarrollo de potencia.\n\n' +
+        'Durante la jornada se aplicaron circuitos metabólicos y rutinas adaptadas a diferentes niveles, priorizando la correcta ejecución técnica y la prevención de lesiones. Los participantes aprendieron cómo estructurar entrenamientos eficientes y sostenibles.\n\n' +
+        'Este workshop brindó herramientas clave para complementar el entrenamiento técnico, ayudando a los atletas a mejorar su resistencia, explosividad y control corporal, fundamentales para un desempeño deportivo integral.',
+        image: 'https://images.unsplash.com/photo-1599058918144-1ffabb6ab9a0?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+        id: 6,
+        title: 'Workshop de Fuerza',
+        date: '12/06/2026',
         location: 'Sede Roca',
         shortDescription: 'Entrenamiento funcional enfocado en fuerza, potencia y resistencia.',
         longDescription:

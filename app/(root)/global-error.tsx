@@ -1,7 +1,7 @@
 'use client';
 // Create forbidden or unauthorized components for authorization errors
 import ErrorRefresh from '@/components/errorComponents/ErrorRefresh';
-import ErrorLink from './../../components/errorComponents/ErrorLink';
+import ErrorLink from '@/components/errorComponents/ErrorLink';
 import { useEffect } from 'react';
  
 const GlobalError = ({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) => {

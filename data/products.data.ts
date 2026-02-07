@@ -1,10 +1,10 @@
 export type Product = {
-    id: number
-    name: string
-    slug: string
-    description: string
-    longDescription: string
-    price: number
+    id: number,
+    name: string,
+    slug: string,
+    description: string,
+    longDescription: string,
+    price: number,
     stock: boolean,
     featured: boolean,
     category:
@@ -14,9 +14,9 @@ export type Product = {
         | 'guantes-boxeo'
         | 'guantes-kick'
         | 'guantes-mma'
-        | 'tibiales'
-    brand: 'Leone' | 'Twins' | 'Venum' | 'Everlast' | 'Forja'
-    image: string
+        | 'tibiales',
+    brand: 'Leone' | 'Twins' | 'Venum' | 'Everlast' | 'Forja',
+    image: string,
 }
 
 export const products: Product[] = [

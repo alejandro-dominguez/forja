@@ -15,10 +15,7 @@ const NoCartItemsCard = () => {
             onBeforeNavigate={() => scrollToRef('scroll-y-Body', 0)}
         >
             <div className='flex flex-col items-center gap-4'>
-                <h1
-                    className='text-center font-bold text-lg grid
-                    place-items-center leading-7'
-                >
+                <h1 className='text-center font-bold text-lg grid place-items-center leading-7'>
                     <span>
                         Aún no hay productos
                     </span>

@@ -18,12 +18,16 @@ const Eventos = () => {
             <h1 className='text-4xl font-dela-gothic-one mb-6 uppercase text-transparent'>
                 EVENTOS
             </h1>
-            {upcomingEvents[0] && (
-                <div className='grid place-items-start'>
+            {upcomingEvents.length > 0 && (
+                <div>
                     <h2 className='font-dela-gothic-one text-dark text-2xl md:text-3xl uppercase mb-3'>
-                        PRÓXIMO EVENTO
-                    </h2>
-                    <GymEventCard {...upcomingEvents[0]} />
+                            PRÓXIMOS EVENTOS
+                        </h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                        {upcomingEvents.map(event => (
+                            <GymEventCard key={event.id} {...event} />
+                        ))}
+                    </div>
                 </div>
             )}
             <div>

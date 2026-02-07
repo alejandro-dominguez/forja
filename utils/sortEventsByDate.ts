@@ -6,8 +6,4 @@ export const parseEventDate = (date: string) => {
 }
 
 export const sortEventsByDateAsc = (events: GymEvent[]) =>
-    [...events].sort(
-        (a, b) =>
-            parseEventDate(a.date).getTime() -
-            parseEventDate(b.date).getTime()
-    )
+    [...events].sort((a, b) => parseEventDate(a.date).getTime() - parseEventDate(b.date).getTime())
