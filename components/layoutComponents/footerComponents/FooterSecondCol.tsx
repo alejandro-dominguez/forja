@@ -20,7 +20,7 @@ const FooterSecondCol = () => {
                     <FaPhoneAlt className='block' size={15} />
                 </div>
                 <span>
-                    341-2820807
+                    Whatsapp
                 </span>
             </Link>
             <Link
