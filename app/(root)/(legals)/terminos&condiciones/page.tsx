@@ -34,7 +34,7 @@ const TerminosCondiciones = () => {
                     a cualquier tercero.
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Declaración de Limitación de Responsabilidad 
             </h2>
             <div className='legals-text-container'>
@@ -47,7 +47,7 @@ const TerminosCondiciones = () => {
                     Con la mayor extensión permitida por las leyes aplicables.
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Privacidad
             </h2>
             <div className='legals-text-container'>
@@ -59,7 +59,7 @@ const TerminosCondiciones = () => {
                     datos, ni se requerirán información sensible a la intimidad. 
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Compra de Productos en el sitio
             </h2>
             <div className='legals-text-container'>
@@ -86,7 +86,7 @@ const TerminosCondiciones = () => {
                     comprador, para acordar formas de pago y ultimar detalles del envío.  
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Condiciones de Pago 
             </h2>
             <div className='legals-text-container'>
@@ -105,7 +105,7 @@ const TerminosCondiciones = () => {
                     su ordenador antes de ser enviados al protocolo SSL.
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Tiempos de Entrega 
             </h2>
             <div className='legals-text-container'>
@@ -132,7 +132,7 @@ const TerminosCondiciones = () => {
                     luego de dicho excedente se cobra como un envío extra.
                 </p>
             </div>
-            <h2 className='legals-subtitle'>
+            <h2>
                 Entrega fallida 
             </h2>
             <div className='legals-text-container'>

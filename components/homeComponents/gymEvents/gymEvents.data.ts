@@ -72,7 +72,7 @@ export const events: GymEvent[] = [
     {
         id: 6,
         title: 'Workshop de Fuerza',
-        date: '12/06/2026',
+        date: '12/12/2026',
         location: 'Sede Roca',
         shortDescription: 'Entrenamiento funcional enfocado en fuerza, potencia y resistencia.',
         longDescription:
